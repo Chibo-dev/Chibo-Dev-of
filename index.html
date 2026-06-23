@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sites e automações que dão resultado. Front-end, web design e processos sob medida." />
+  <meta name="author" content="Yuri Chibo" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Chibo Dev · Sites e Automações" />
+  <meta property="og:description" content="Front-end, web design e automações sob medida pra quem quer ser levado a sério." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chibodev.com" />
+
+  <title>Chibo Dev · Sites e automações</title>
+
+  <!-- Fonte: Geist (Vercel) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================== -->
+  <!-- HEADER                                          -->
+  <!-- ============================================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="Chibo Dev">
+        Chibo <span class="logo__dot">Dev</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#services" data-i18n="nav.services">Serviços</a>
+        <a href="#work" data-i18n="nav.work">Trabalhos</a>
+        <a href="#process" data-i18n="nav.process">Processo</a>
+        <a href="#about" data-i18n="nav.about">Sobre</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Trocar idioma">
+          <span class="lang-toggle__opt is-active" data-lang="pt">PT</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+        </button>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn--primary btn--sm" data-i18n="nav.cta">Conversar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================== -->
+  <!-- 01 · HERO                                       -->
+  <!-- ============================================== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__grid"></div>
+      <div class="hero__glow"></div>
+    </div>
+
+    <!-- Marquee de palavras flutuando atrás -->
+    <div class="hero__marquee" aria-hidden="true">
+      <div class="hero__marquee-track">
+        <span>Landing pages</span><span>·</span>
+        <span>Sites institucionais</span><span>·</span>
+        <span>E-commerce</span><span>·</span>
+        <span>Automação</span><span>·</span>
+        <span>WhatsApp Bot</span><span>·</span>
+        <span>SEO</span><span>·</span>
+        <span>UX</span><span>·</span>
+        <span>Performance</span><span>·</span>
+        <span>Landing pages</span><span>·</span>
+        <span>Sites institucionais</span><span>·</span>
+        <span>E-commerce</span><span>·</span>
+        <span>Automação</span><span>·</span>
+        <span>WhatsApp Bot</span><span>·</span>
+        <span>SEO</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- Pills decorativas flutuantes -->
+    <div class="hero__pills" aria-hidden="true">
+      <span class="hero-pill hero-pill--1" data-i18n="hero.pill1">→ resultado</span>
+      <span class="hero-pill hero-pill--2" data-i18n="hero.pill2">★ muito café</span>
+      <span class="hero-pill hero-pill--3" data-i18n="hero.pill3">{ código limpo }</span>
+      <span class="hero-pill hero-pill--4" data-i18n="hero.pill4">+ velocidade</span>
+    </div>
+
+    <div class="container hero__container">
+      <div class="hero__meta">
+        <span class="status-dot"></span>
+        <span data-i18n="hero.status">Disponível para novos projetos</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="hero__line hero__line--1">
+          <span class="hero__word"><span data-i18n="hero.line1">Sites e automações</span></span>
+        </span>
+        <span class="hero__line hero__line--2">
+          <span class="hero__word"><span data-i18n="hero.line2a">que dão</span></span>
+          <em class="hero__em" data-i18n="hero.line2b"> resultado</em><span class="hero__dot">.</span>
+        </span>
+      </h1>
+
+      <p class="hero__sub" data-i18n="hero.sub">
+        Front-end, web design e processos que rodam sozinhos, sob medida pra quem quer ser levado a sério.
+      </p>
+
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary">
+          <span data-i18n="hero.cta1">Conversar sobre meu projeto</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#work" class="btn btn--ghost" data-i18n="hero.cta2">Ver trabalhos</a>
+      </div>
+
+      <!-- Stats discretas no rodapé do hero -->
+      <div class="hero__stats">
+        <div class="hero-stat">
+          <span class="hero-stat__num">06</span>
+          <span class="hero-stat__label" data-i18n="hero.stat1">projetos no ar</span>
+        </div>
+        <div class="hero-stat__sep"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">02</span>
+          <span class="hero-stat__label" data-i18n="hero.stat2">países atendidos</span>
+        </div>
+        <div class="hero-stat__sep"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">100%</span>
+          <span class="hero-stat__label" data-i18n="hero.stat3">do zero, sem template</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span data-i18n="hero.scroll">role pra ver</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 02 · LOGOS / PROVA SOCIAL                       -->
+  <!-- ============================================== -->
+  <section class="logos">
+    <div class="container">
+      <p class="logos__title" data-i18n="logos.title">Quem já confiou no meu trabalho</p>
+      <div class="logos__row">
+        <div class="logo-placeholder logo-placeholder--featured">
+          ACES <span class="logo-placeholder__flag">🇺🇸</span>
+        </div>
+        <div class="logo-placeholder">Hidro-Sul</div>
+        <div class="logo-placeholder">Mentoria Route</div>
+        <div class="logo-placeholder">Daphine Santana</div>
+        <div class="logo-placeholder">Quilombo Doces</div>
+        <div class="logo-placeholder">Coopmed Mogi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 03 · SERVIÇOS                                   -->
+  <!-- ============================================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-head__num">01</span>
+        <h2 class="section-head__title" data-i18n="services.title">O que eu faço</h2>
+      </header>
+
+      <div class="services__grid">
+
+        <article class="service service--featured">
+          <span class="service__star">★</span>
+          <div class="service__num">→ 01</div>
+          <h3 class="service__title" data-i18n="services.lp.title">Landing pages que convertem</h3>
+          <p class="service__desc" data-i18n="services.lp.desc">
+            Páginas focadas num único objetivo: gerar lead, vender produto, lançar campanha. Estrutura, copy e design pensados pro visitante agir.
+          </p>
+          <ul class="service__tags">
+            <li data-i18n="services.lp.tag1">Conversão</li>
+            <li data-i18n="services.lp.tag2">Copy</li>
+            <li data-i18n="services.lp.tag3">Performance</li>
+          </ul>
+        </article>
+
+        <article class="service service--featured">
+          <span class="service__star">★</span>
+          <div class="service__num">→ 02</div>
+          <h3 class="service__title" data-i18n="services.inst.title">Sites institucionais que vendem por você</h3>
+          <p class="service__desc" data-i18n="services.inst.desc">
+            Presença digital que comunica autoridade e fecha negócio enquanto você dorme. Performance, SEO técnico e identidade alinhada com sua marca.
+          </p>
+          <ul class="service__tags">
+            <li data-i18n="services.inst.tag1">Autoridade</li>
+            <li data-i18n="services.inst.tag2">SEO</li>
+            <li data-i18n="services.inst.tag3">Identidade</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <div class="service__num">03</div>
+          <h3 class="service__title" data-i18n="services.ec.title">E-commerces que convertem</h3>
+          <p class="service__desc" data-i18n="services.ec.desc">
+            Lojas virtuais construídas pra converter — não só pra existir. Integração com meios de pagamento, catálogo e fluxo de compra otimizado.
+          </p>
+          <ul class="service__tags">
+            <li data-i18n="services.ec.tag1">Pagamento</li>
+            <li data-i18n="services.ec.tag2">Catálogo</li>
+            <li data-i18n="services.ec.tag3">Checkout</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <div class="service__num">04</div>
+          <h3 class="service__title" data-i18n="services.auto.title">Automações que devolvem seu tempo</h3>
+          <p class="service__desc" data-i18n="services.auto.desc">
+            Atendimento de WhatsApp automatizado, fluxos comerciais que rodam sozinhos, integrações entre ferramentas. Menos trabalho repetitivo, mais foco no que importa.
+          </p>
+          <ul class="service__tags">
+            <li data-i18n="services.auto.tag1">WhatsApp</li>
+            <li data-i18n="services.auto.tag2">Integrações</li>
+            <li data-i18n="services.auto.tag3">Fluxos</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 04 · TRABALHOS                                  -->
+  <!-- ============================================== -->
+  <section class="work" id="work">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-head__num">02</span>
+        <h2 class="section-head__title" data-i18n="work.title">Trabalhos recentes</h2>
+      </header>
+
+      <div class="work__grid">
+
+        <!-- ACES — destaque (case--large) -->
+        <article class="case case--large case--aces"
+                 data-case
+                 data-case-id="aces"
+                 data-case-url="https://acesllc.com"
+                 data-case-video="">
+          <div class="case__visual">
+            <div class="device-mockup device-mockup--featured">
+              <div class="device-laptop">
+                <div class="device-laptop__screen">
+                  <!-- Substituir o conteúdo abaixo por <img src="caminho/screenshot-aces.jpg" alt="ACES Site"> -->
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">ACES.com</span>
+                    <span class="device-placeholder__hint">substituir por screenshot</span>
+                  </div>
+                </div>
+                <div class="device-laptop__base"></div>
+              </div>
+              <div class="device-phone">
+                <div class="device-phone__notch"></div>
+                <div class="device-phone__screen">
+                  <!-- Substituir por <img src="caminho/screenshot-aces-mobile.jpg" alt="ACES Mobile"> -->
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">mobile</span>
+                  </div>
+                </div>
+              </div>
+              <div class="case__flag">🇺🇸</div>
+            </div>
+          </div>
+          <div class="case__info">
+            <div class="case__meta">
+              <span class="case__type" data-i18n="work.case01.type">Site Institucional · EUA</span>
+              <span class="case__status case__status--featured" data-i18n="work.case01.status">★ Destaque</span>
+            </div>
+            <h3 class="case__title" data-i18n="work.case01.title">ACES Electrical Services</h3>
+            <p class="case__desc" data-i18n="work.case01.desc">
+              Site institucional bilíngue para empreiteira elétrica norte-americana. Comunicação direta, foco em conversão B2B e captação de talentos para o setor comercial e residencial.
+            </p>
+            <div class="case__highlight">
+              <span class="case__highlight-dot" aria-hidden="true"></span>
+              <span data-i18n="work.case01.hl">+214 obras plotadas em mapa interativo · 36 páginas</span>
+            </div>
+            <div class="case__tags">
+              <span data-i18n="work.case01.tag1">Bilíngue</span>
+              <span data-i18n="work.case01.tag2">B2B</span>
+              <span data-i18n="work.case01.tag3">Construção</span>
+            </div>
+            <button type="button" class="case__link" data-case-open="aces" data-i18n="work.case01.link">Ver case completo →</button>
+          </div>
+        </article>
+
+        <!-- Quilombo Doces -->
+        <article class="case case--quilombo"
+                 data-case
+                 data-case-id="quilombo"
+                 data-case-url="https://quilombodoces.com"
+                 data-case-video="">
+          <div class="case__visual">
+            <div class="device-mockup">
+              <div class="device-laptop">
+                <div class="device-laptop__screen">
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">Quilombo Doces</span>
+                    <span class="device-placeholder__hint">substituir por screenshot</span>
+                  </div>
+                </div>
+                <div class="device-laptop__base"></div>
+              </div>
+              <div class="device-phone">
+                <div class="device-phone__notch"></div>
+                <div class="device-phone__screen">
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">mobile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case__info">
+            <div class="case__meta">
+              <span class="case__type" data-i18n="work.case02.type">E-commerce</span>
+              <span class="case__status case__status--live" data-i18n="work.case02.status">Entregue</span>
+            </div>
+            <h3 class="case__title" data-i18n="work.case02.title">Quilombo Doces</h3>
+            <p class="case__desc" data-i18n="work.case02.desc">
+              E-commerce para gastronomia quilombola contemporânea. Identidade editorial forte, narrativa ancestral e catálogo de doces, licores e geleias artesanais.
+            </p>
+            <div class="case__highlight">
+              <span class="case__highlight-dot" aria-hidden="true"></span>
+              <span data-i18n="work.case02.hl">Loja própria · checkout no WhatsApp · sem mensalidade</span>
+            </div>
+            <div class="case__tags">
+              <span data-i18n="work.case02.tag1">Editorial</span>
+              <span data-i18n="work.case02.tag2">Artesanal</span>
+            </div>
+            <button type="button" class="case__link" data-case-open="quilombo" data-i18n="work.case02.link">Ver case →</button>
+          </div>
+        </article>
+
+        <!-- Coopmed -->
+        <article class="case case--coopmed"
+                 data-case
+                 data-case-id="coopmed"
+                 data-case-url="https://coopmedmogi.com.br"
+                 data-case-video="">
+          <div class="case__visual">
+            <div class="device-mockup">
+              <div class="device-laptop">
+                <div class="device-laptop__screen">
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">Coopmed Mogi</span>
+                    <span class="device-placeholder__hint">substituir por screenshot</span>
+                  </div>
+                </div>
+                <div class="device-laptop__base"></div>
+              </div>
+              <div class="device-phone">
+                <div class="device-phone__notch"></div>
+                <div class="device-phone__screen">
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">mobile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case__info">
+            <div class="case__meta">
+              <span class="case__type" data-i18n="work.case03.type">Site Institucional</span>
+              <span class="case__status case__status--live" data-i18n="work.case03.status">Entregue</span>
+            </div>
+            <h3 class="case__title" data-i18n="work.case03.title">Coopmed Mogi</h3>
+            <p class="case__desc" data-i18n="work.case03.desc">
+              Site institucional para cooperativa médica em Mogi das Cruzes. Tom sóbrio e confiável, hierarquia clara de especialidades e foco em credibilidade no setor de saúde.
+            </p>
+            <div class="case__tags">
+              <span data-i18n="work.case03.tag1">Saúde</span>
+              <span data-i18n="work.case03.tag2">Cooperativa</span>
+            </div>
+            <button type="button" class="case__link" data-case-open="coopmed" data-i18n="work.case03.link">Ver case →</button>
+          </div>
+        </article>
+
+        <!-- Mentoria Route -->
+        <article class="case case--route"
+                 data-case
+                 data-case-id="route"
+                 data-case-url=""
+                 data-case-video="">
+          <div class="case__visual">
+            <div class="device-mockup">
+              <div class="device-laptop">
+                <div class="device-laptop__screen">
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">Mentoria Route</span>
+                    <span class="device-placeholder__hint">substituir por screenshot</span>
+                  </div>
+                </div>
+                <div class="device-laptop__base"></div>
+              </div>
+              <div class="device-phone">
+                <div class="device-phone__notch"></div>
+                <div class="device-phone__screen">
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">mobile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case__info">
+            <div class="case__meta">
+              <span class="case__type" data-i18n="work.case05.type">Landing Page</span>
+              <span class="case__status case__status--live" data-i18n="work.case05.status">Entregue</span>
+            </div>
+            <h3 class="case__title" data-i18n="work.case05.title">Mentoria Route</h3>
+            <p class="case__desc" data-i18n="work.case05.desc">
+              Landing page para mentoria de desenvolvimento pessoal e alta performance, conduzida por Larissa Sayuri. Foco em conversão de inscrições e comunicação aspiracional alinhada à proposta da mentora.
+            </p>
+            <div class="case__highlight">
+              <span class="case__highlight-dot" aria-hidden="true"></span>
+              <span data-i18n="work.case05.hl">100/100/100/100 no Google PageSpeed</span>
+            </div>
+            <div class="case__tags">
+              <span data-i18n="work.case05.tag1">Mentoria</span>
+              <span data-i18n="work.case05.tag2">Alta performance</span>
+            </div>
+            <button type="button" class="case__link" data-case-open="route" data-i18n="work.case05.link">Ver case →</button>
+          </div>
+        </article>
+
+        <!-- Hidro-Sul -->
+        <article class="case case--hidrosul"
+                 data-case
+                 data-case-id="hidrosul"
+                 data-case-url=""
+                 data-case-video="">
+          <div class="case__visual">
+            <div class="device-mockup">
+              <div class="device-laptop">
+                <div class="device-laptop__screen">
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">Hidro-Sul</span>
+                    <span class="device-placeholder__hint">substituir por screenshot</span>
+                  </div>
+                </div>
+                <div class="device-laptop__base"></div>
+              </div>
+              <div class="device-phone">
+                <div class="device-phone__notch"></div>
+                <div class="device-phone__screen">
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">mobile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case__info">
+            <div class="case__meta">
+              <span class="case__type" data-i18n="work.case06.type">Site Institucional · B2B</span>
+              <span class="case__status case__status--live" data-i18n="work.case06.status">Entregue</span>
+            </div>
+            <h3 class="case__title" data-i18n="work.case06.title">Hidro-Sul</h3>
+            <p class="case__desc" data-i18n="work.case06.desc">
+              Site institucional multipágina para soluções hidráulicas e manutenção predial. Foco em condomínios e parcerias B2B, com migração de domínio feita sem tirar o site do ar.
+            </p>
+            <div class="case__highlight">
+              <span class="case__highlight-dot" aria-hidden="true"></span>
+              <span data-i18n="work.case06.hl">Multipágina · deploy na Cloudflare</span>
+            </div>
+            <div class="case__tags">
+              <span data-i18n="work.case06.tag1">B2B</span>
+              <span data-i18n="work.case06.tag2">Manutenção predial</span>
+            </div>
+            <button type="button" class="case__link" data-case-open="hidrosul" data-i18n="work.case06.link">Ver case →</button>
+          </div>
+        </article>
+
+        <!-- Daphine Santana -->
+        <article class="case case--daphine"
+                 data-case
+                 data-case-id="daphine"
+                 data-case-url="https://daphinesantana.com.br"
+                 data-case-video="">
+          <div class="case__visual">
+            <div class="device-mockup">
+              <div class="device-laptop">
+                <div class="device-laptop__screen">
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">Daphine Santana</span>
+                    <span class="device-placeholder__hint">substituir por screenshot</span>
+                  </div>
+                </div>
+                <div class="device-laptop__base"></div>
+              </div>
+              <div class="device-phone">
+                <div class="device-phone__notch"></div>
+                <div class="device-phone__screen">
+                  <div class="device-placeholder">
+                    <span class="device-placeholder__label">mobile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case__info">
+            <div class="case__meta">
+              <span class="case__type" data-i18n="work.case07.type">Marca Pessoal</span>
+              <span class="case__status case__status--live" data-i18n="work.case07.status">Entregue</span>
+            </div>
+            <h3 class="case__title" data-i18n="work.case07.title">Daphine Santana</h3>
+            <p class="case__desc" data-i18n="work.case07.desc">
+              Site de marca pessoal com linktree personalizado, indexação no Google e animações de rolagem. Uma presença digital própria, fora da dependência das redes sociais.
+            </p>
+            <div class="case__highlight">
+              <span class="case__highlight-dot" aria-hidden="true"></span>
+              <span data-i18n="work.case07.hl">Indexado no Google · linktree próprio</span>
+            </div>
+            <div class="case__tags">
+              <span data-i18n="work.case07.tag1">Marca pessoal</span>
+              <span data-i18n="work.case07.tag2">SEO</span>
+            </div>
+            <button type="button" class="case__link" data-case-open="daphine" data-i18n="work.case07.link">Ver case →</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 03 · DEPOIMENTOS                                -->
+  <!-- ============================================== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-head__num">03</span>
+        <h2 class="section-head__title" data-i18n="testi.title">O que dizem do trabalho</h2>
+        <p class="section-head__sub" data-i18n="testi.sub">Logo prova que o cliente existe. Depoimento prova que o trabalho funcionou.</p>
+      </header>
+
+      <div class="testimonials__grid">
+
+        <!-- ACES — destaque (EUA) -->
+        <figure class="testimonial testimonial--featured is-empty">
+          <div class="testimonial__mark" aria-hidden="true">“</div>
+          <blockquote class="testimonial__quote" data-i18n="testi.q1">
+            Cole aqui uma frase do cliente sobre o resultado — mais contatos, mais autoridade, a sensação de finalmente ter algo profissional no ar.
+          </blockquote>
+          <figcaption class="testimonial__author">
+            <span class="testimonial__avatar">R</span>
+            <span class="testimonial__id">
+              <span class="testimonial__name">Rayffa <span class="testimonial__flag">🇺🇸</span></span>
+              <span class="testimonial__role" data-i18n="testi.r1">ACES Electrical Services · EUA</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <!-- Larissa Sayuri — Mentoria Route -->
+        <figure class="testimonial is-empty">
+          <div class="testimonial__mark" aria-hidden="true">“</div>
+          <blockquote class="testimonial__quote" data-i18n="testi.q2">
+            Cole aqui uma frase da Larissa sobre como a landing comunicou a mentoria e converteu inscrições.
+          </blockquote>
+          <figcaption class="testimonial__author">
+            <span class="testimonial__avatar">L</span>
+            <span class="testimonial__id">
+              <span class="testimonial__name">Larissa Sayuri</span>
+              <span class="testimonial__role" data-i18n="testi.r2">Mentoria Route</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <!-- Caio Vital — Hidro-Sul -->
+        <figure class="testimonial is-empty">
+          <div class="testimonial__mark" aria-hidden="true">“</div>
+          <blockquote class="testimonial__quote" data-i18n="testi.q3">
+            Cole aqui uma frase do Caio sobre o site multipágina e a migração sem dor de cabeça.
+          </blockquote>
+          <figcaption class="testimonial__author">
+            <span class="testimonial__avatar">C</span>
+            <span class="testimonial__id">
+              <span class="testimonial__name">Caio Vital</span>
+              <span class="testimonial__role" data-i18n="testi.r3">Hidro-Sul</span>
+            </span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- CTA BAND                                         -->
+  <!-- ============================================== -->
+  <section class="cta-band">
+    <div class="container cta-band__inner">
+      <div class="cta-band__text">
+        <h2 class="cta-band__title" data-i18n="cta.title">Seu próximo projeto pode ser o próximo case aqui.</h2>
+        <p class="cta-band__sub" data-i18n="cta.sub">Uma conversa de 30 minutos, sem custo e sem compromisso. Você sai dela sabendo o que dá pra fazer.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="#contact" class="btn btn--primary" data-i18n="cta.btn1">Começar uma conversa</a>
+        <a href="https://wa.me/5511981783418" target="_blank" rel="noopener" class="btn btn--ghost" data-i18n="cta.btn2">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 04 · PROCESSO                                   -->
+  <!-- ============================================== -->
+  <section class="process" id="process">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-head__num">04</span>
+        <h2 class="section-head__title" data-i18n="process.title">Como a gente trabalha junto</h2>
+      </header>
+
+      <div class="process__wrap">
+        <!-- Linha de progresso animada -->
+        <div class="process__track" aria-hidden="true">
+          <div class="process__progress" id="processProgress"></div>
+        </div>
+
+        <ol class="process__list">
+          <li class="step" data-step="1">
+            <div class="step__num">01</div>
+            <div class="step__content">
+              <h3 class="step__title" data-i18n="process.s1.title">Conversa</h3>
+              <p class="step__desc" data-i18n="process.s1.desc">Entendo seu negócio, seus objetivos e onde você quer chegar. Sem briefing genérico.</p>
+              <span class="step__meta" data-i18n="process.s1.meta">~ 30 min · sem custo</span>
+            </div>
+          </li>
+          <li class="step" data-step="2">
+            <div class="step__num">02</div>
+            <div class="step__content">
+              <h3 class="step__title" data-i18n="process.s2.title">Proposta</h3>
+              <p class="step__desc" data-i18n="process.s2.desc">Escopo claro, prazo realista, valor fechado. Sem surpresa no meio do caminho.</p>
+              <span class="step__meta" data-i18n="process.s2.meta">até 2 dias úteis</span>
+            </div>
+          </li>
+          <li class="step" data-step="3">
+            <div class="step__num">03</div>
+            <div class="step__content">
+              <h3 class="step__title" data-i18n="process.s3.title">Construção</h3>
+              <p class="step__desc" data-i18n="process.s3.desc">Trabalho com transparência total: você acompanha o progresso e dá feedback nos pontos certos.</p>
+              <span class="step__meta" data-i18n="process.s3.meta">1 a 6 semanas</span>
+            </div>
+          </li>
+          <li class="step" data-step="4">
+            <div class="step__num">04</div>
+            <div class="step__content">
+              <h3 class="step__title" data-i18n="process.s4.title">Entrega e suporte</h3>
+              <p class="step__desc" data-i18n="process.s4.desc">Site no ar, treinamento de uso (se precisar) e suporte pós-entrega pra você não ficar na mão.</p>
+              <span class="step__meta" data-i18n="process.s4.meta">+ 30 dias de suporte</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 06 · SOBRE                                      -->
+  <!-- ============================================== -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+
+      <div class="about__visual" aria-hidden="true">
+        <div class="about__monogram">
+          <span>C</span>
+        </div>
+        <div class="about__tags">
+          <span class="about__tag" data-i18n="about.tag1">Front-end</span>
+          <span class="about__tag" data-i18n="about.tag2">Web design</span>
+          <span class="about__tag" data-i18n="about.tag3">Automação</span>
+          <span class="about__tag" data-i18n="about.tag4">UX</span>
+        </div>
+      </div>
+
+      <div class="about__content">
+        <header class="section-head section-head--inline">
+          <span class="section-head__num">05</span>
+          <h2 class="section-head__title" data-i18n="about.title">Oi, tudo bem?</h2>
+        </header>
+
+        <p class="about__lead" data-i18n="about.lead">
+          Eu sou o <strong>Yuri</strong> — mas pode me chamar de <strong>Chibo</strong>.
+        </p>
+
+        <p data-i18n="about.p1">
+          Sou desenvolvedor front-end e web designer, e há algum tempo eu venho me dedicando a uma ideia simples: site não é vitrine, é ferramenta de trabalho. A maioria dos sites que existem por aí estão lá só pra "ter um site" — e isso é um desperdício de uma das ferramentas mais poderosas que um negócio pode ter.
+        </p>
+
+        <p data-i18n="about.p2">
+          O que eu faço é construir presença digital que <em>trabalha pelo seu negócio</em>. Sites que carregam rápido, comunicam bem, são fáceis de manter e — principalmente — geram resultado. Hoje atendo clientes no Brasil e nos Estados Unidos, em português e em inglês.
+        </p>
+
+        <p data-i18n="about.p3">
+          Se você chegou aqui, provavelmente tá pensando em mexer no seu digital. Bora conversar.
+        </p>
+
+        <a href="https://wa.me/5511981783418" class="btn btn--primary about__cta" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.3.7 2.9 1.1 4.5 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          <span data-i18n="about.cta">Falar com o Chibo no WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 07 · FAQ                                        -->
+  <!-- ============================================== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-head__num">06</span>
+        <h2 class="section-head__title" data-i18n="faq.title">Perguntas que recebo bastante</h2>
+      </header>
+
+      <div class="faq__list">
+
+        <details class="faq__item">
+          <summary>
+            <span data-i18n="faq.q1">Quanto tempo leva pra ficar pronto?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__answer">
+            <p data-i18n="faq.a1">Depende do escopo. Uma landing page bem feita leva de 1 a 3 semanas. Um site institucional, de 3 a 6. E-commerces e projetos com automação levam mais tempo, mas a gente alinha tudo na proposta.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary>
+            <span data-i18n="faq.q2">Quanto custa?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__answer">
+            <p data-i18n="faq.a2">O orçamento é sob medida porque cada projeto tem um escopo diferente. Me conta o que você tá pensando e eu te mando uma proposta clara em até 2 dias úteis.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary>
+            <span data-i18n="faq.q3">Você usa template ou faz do zero?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__answer">
+            <p data-i18n="faq.a3">Faço do zero, alinhado com a identidade do seu negócio. Template é caminho fácil pra ficar parecido com todo mundo — e isso é o oposto do que eu faço.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary>
+            <span data-i18n="faq.q4">Que tecnologias você usa?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__answer">
+            <p data-i18n="faq.a4">Stack moderno: HTML, CSS, JavaScript, frameworks como React/Next quando faz sentido, e ferramentas como WordPress quando o cliente precisa autonomia pra editar conteúdo. Escolho a tecnologia pelo projeto, não o contrário.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary>
+            <span data-i18n="faq.q5">E depois que o site fica pronto?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__answer">
+            <p data-i18n="faq.a5">Ofereço suporte pós-entrega e planos de manutenção. Você não fica na mão.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- 08 · CONTATO                                    -->
+  <!-- ============================================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+
+        <div class="contact__intro">
+          <header class="section-head">
+            <span class="section-head__num">07</span>
+            <h2 class="section-head__title contact__title">
+              <span data-i18n="contact.title1">Vamos construir</span>
+              <em data-i18n="contact.title2"> algo bom</em>
+              <span data-i18n="contact.title3"> juntos.</span>
+            </h2>
+          </header>
+          <p class="contact__sub" data-i18n="contact.sub">
+            Me conta sobre seu projeto. Respondo em até 24h.
+          </p>
+
+          <div class="contact__channels">
+            <a href="https://wa.me/5511981783418" target="_blank" rel="noopener" class="channel">
+              <span class="channel__label">WhatsApp</span>
+              <span class="channel__value">+55 (11) 98178-3418</span>
+            </a>
+            <a href="mailto:contato@chibodev.com" class="channel">
+              <span class="channel__label">E-mail</span>
+              <span class="channel__value">contato@chibodev.com</span>
+            </a>
+          </div>
+
+          <ul class="contact__assurances">
+            <li><span class="contact__assurances-check" aria-hidden="true"></span><span data-i18n="contact.assure1">Escopo, prazo e valor fechados antes de começar</span></li>
+            <li><span class="contact__assurances-check" aria-hidden="true"></span><span data-i18n="contact.assure2">30 dias de suporte inclusos após a entrega</span></li>
+            <li><span class="contact__assurances-check" aria-hidden="true"></span><span data-i18n="contact.assure3">Resposta em até 24h, sempre com uma pessoa de verdade</span></li>
+          </ul>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name" data-i18n="form.name">Nome</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="email" data-i18n="form.email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="message" data-i18n="form.msg">Me conta sua ideia</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">
+            <span data-i18n="form.submit">Enviar mensagem</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- FOOTER                                          -->
+  <!-- ============================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="logo">Chibo <span class="logo__dot">Dev</span></div>
+          <p data-i18n="footer.tagline">Sites e automações sob medida.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4 data-i18n="footer.nav">Navegação</h4>
+          <a href="#services" data-i18n="nav.services">Serviços</a>
+          <a href="#work" data-i18n="nav.work">Trabalhos</a>
+          <a href="#process" data-i18n="nav.process">Processo</a>
+          <a href="#about" data-i18n="nav.about">Sobre</a>
+        </div>
+
+        <div class="footer__col">
+          <h4 data-i18n="footer.contact">Contato</h4>
+          <a href="mailto:contato@chibodev.com">contato@chibodev.com</a>
+          <a href="https://wa.me/5511981783418" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+
+        <div class="footer__col">
+          <h4 data-i18n="footer.lang">Idiomas</h4>
+          <p class="footer__langs" data-i18n="footer.langs">Português · Inglês</p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 Yuri Chibo · chibodev.com</span>
+        <nav class="footer__legal" aria-label="Páginas legais">
+          <a href="politica-de-privacidade.html" data-i18n="footer.privacy">Política de Privacidade</a>
+          <span class="footer__legal-sep" aria-hidden="true">·</span>
+          <a href="politica-de-cookies.html" data-i18n="footer.cookies">Política de Cookies</a>
+          <span class="footer__legal-sep" aria-hidden="true">·</span>
+          <a href="termos-de-uso.html" data-i18n="footer.terms">Termos de Uso</a>
+          <span class="footer__legal-sep" aria-hidden="true">·</span>
+          <a href="#" data-cookie-prefs data-i18n="footer.prefs">Preferências de cookies</a>
+        </nav>
+        <span data-i18n="footer.made">Feito com muito café.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5511981783418" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.3.7 2.9 1.1 4.5 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+  </a>
+
+  <!-- ============================================== -->
+  <!-- MODAL: case detail                              -->
+  <!-- ============================================== -->
+  <div class="modal" id="caseModal" role="dialog" aria-modal="true" aria-labelledby="caseModalTitle" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__panel" role="document">
+
+      <button class="modal__close" data-modal-close aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <div class="modal__scroll">
+
+        <!-- Header -->
+        <header class="modal__head">
+          <div class="modal__meta">
+            <span class="modal__type" id="modalType"></span>
+            <span class="modal__status" id="modalStatus"></span>
+          </div>
+          <h2 class="modal__title" id="caseModalTitle"></h2>
+          <p class="modal__desc" id="modalDesc"></p>
+          <div class="modal__tags" id="modalTags"></div>
+        </header>
+
+        <!-- Devices preview -->
+        <div class="modal__devices" id="modalDevices">
+          <div class="device-mockup device-mockup--featured">
+            <div class="device-laptop">
+              <div class="device-laptop__screen">
+                <div class="device-placeholder">
+                  <span class="device-placeholder__label" id="modalLaptopLabel">desktop</span>
+                  <span class="device-placeholder__hint" data-i18n="modal.placeholder">substituir por screenshot</span>
+                </div>
+              </div>
+              <div class="device-laptop__base"></div>
+            </div>
+            <div class="device-phone">
+              <div class="device-phone__notch"></div>
+              <div class="device-phone__screen">
+                <div class="device-placeholder">
+                  <span class="device-placeholder__label">mobile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vídeo (renderizado por JS quando data-case-video estiver setado) -->
+        <div class="modal__video" id="modalVideo" hidden>
+          <div class="modal__video-wrap" id="modalVideoWrap"></div>
+        </div>
+
+        <!-- Body com contexto + entregáveis -->
+        <div class="modal__body">
+          <section class="modal__section">
+            <h3 data-i18n="modal.context">Contexto</h3>
+            <p id="modalContext"></p>
+          </section>
+
+          <section class="modal__section">
+            <h3 data-i18n="modal.delivery">O que foi feito</h3>
+            <ul id="modalDelivery"></ul>
+          </section>
+        </div>
+
+        <!-- CTA -->
+        <footer class="modal__cta">
+          <a href="#" class="btn btn--primary" target="_blank" rel="noopener" id="modalLiveLink">
+            <span data-i18n="modal.cta1">Ver site ao vivo</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+          <a href="https://wa.me/5511981783418" class="btn btn--ghost" target="_blank" rel="noopener">
+            <span data-i18n="modal.cta2">Quero algo parecido</span>
+          </a>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cookie-consent.js"></script>
+</body>
+</html>
