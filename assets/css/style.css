@@ -212,6 +212,11 @@ section {
   gap: 12px;
   justify-self: end;
 }
+.header__actions .lang-toggle,
+.header__actions .theme-toggle,
+.header__actions .btn--sm {
+  height: 36px;
+}
 
 /* Lang toggle */
 .lang-toggle {
@@ -605,6 +610,20 @@ section {
   border-color: var(--text);
 }
 
+/* ----- Logos de clientes (imagens PNG) ----- */
+.logo-img {
+  height: 30px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: .7;
+  transition: opacity .3s var(--ease), transform .3s var(--ease);
+}
+.logo-img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
 /* ============================================== */
 /* SERVICES                                        */
 /* ============================================== */
@@ -614,7 +633,7 @@ section {
 }
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   border-top: 1px solid var(--border);
   border-left: 1px solid var(--border);
@@ -808,6 +827,12 @@ section {
   z-index: 3;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
 }
+
+/* Bandeira dos EUA em SVG: renderiza igual em qualquer sistema (o emoji de bandeira aparece como "US" no Windows) */
+.flag-us { display: block; border-radius: 2px; }
+.case__flag .flag-us { width: 26px; height: auto; }
+.testimonial__flag { display: inline-flex; align-items: center; vertical-align: middle; margin-left: 3px; }
+.testimonial__flag .flag-us { width: 18px; height: auto; box-shadow: 0 0 0 1px rgba(0,0,0,0.12); }
 
 
 /* ===== Device mockup: laptop + phone ===== */
@@ -1467,6 +1492,9 @@ section {
   margin-bottom: 64px;
 }
 
+.footer__brand .logo {
+  font-size: 30px;
+}
 .footer__brand p {
   color: var(--text-soft);
   font-size: 14px;
