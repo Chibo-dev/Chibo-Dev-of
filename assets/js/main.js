@@ -42,9 +42,9 @@ const translations = {
     'services.inst.tag2': 'SEO',
     'services.inst.tag3': 'Identidade',
     'services.brand.title': 'Sites de marca pessoal',
-    'services.brand.desc': 'Pra profissionais, criadores e quem precisa de uma presença própria fora das redes. Um site só seu — rápido, fácil de achar no Google e com uma página de links própria, no seu domínio.',
+    'services.brand.desc': 'Pra criadores e profissionais que querem uma presença própria fora das redes — fácil de achar no Google e com página de links no domínio.',
     'services.brand.tag1': 'Portfólio',
-    'services.brand.tag2': 'Página de links',
+    'services.brand.tag2': 'Links',
     'services.brand.tag3': 'SEO',
 
     'work.title': 'Trabalhos recentes',
@@ -105,9 +105,12 @@ const translations = {
     'testi.r2': 'Mentoria Route',
     'testi.q3': 'Cole aqui uma frase do Caio sobre o site multipágina e a migração sem dor de cabeça.',
     'testi.r3': 'Hidro-Sul',
+    'testi.q4': 'Trabalhar com você foi uma experiência excelente. Além de compreender exatamente o que eu queria transmitir com o site, você conseguiu transformar minhas ideias em algo muito mais profissional, bonito e funcional do que eu imaginava. O cuidado com os detalhes, a agilidade nas entregas e a disponibilidade durante todo o processo fizeram toda a diferença no resultado final.',
+    'testi.r4': 'Psicomotricista',
 
+    'cta.eyebrow': '→ próximo passo',
     'cta.title': 'Seu próximo projeto pode ser o próximo case aqui.',
-    'cta.sub': 'Uma conversa de 30 minutos, sem custo e sem compromisso. Você sai dela sabendo o que dá pra fazer.',
+    'cta.sub': 'Uma conversa de 30 minutos, sem custo e sem compromisso. Você sai dela sabendo o que podemos construir juntos.',
     'cta.btn1': 'Começar uma conversa',
     'cta.btn2': 'Chamar no WhatsApp',
 
@@ -126,13 +129,13 @@ const translations = {
     'process.s4.meta': '+ 30 dias de suporte',
 
     'about.title': 'Oi, tudo bem?',
-    'about.lead': 'Eu sou o <strong>Yuri</strong> — mas pode me chamar de <strong>Chibo</strong>.',
-    'about.p1': 'Sou desenvolvedor front-end e web designer, e há algum tempo eu venho me dedicando a uma ideia simples: site não é vitrine, é ferramenta de trabalho. A maioria dos sites que existem por aí estão lá só pra "ter um site" — e isso é um desperdício de uma das ferramentas mais poderosas que um negócio pode ter.',
-    'about.p2': 'O que eu faço é construir presença digital que <em>trabalha pelo seu negócio</em>. Sites que carregam rápido, comunicam bem, são fáceis de manter e — principalmente — geram resultado. Hoje atendo clientes no Brasil e nos Estados Unidos, em português e em inglês.',
-    'about.p3': 'Se você chegou aqui, provavelmente tá pensando em mexer no seu digital. Bora conversar.',
-    'about.cta': 'Falar com o Chibo no WhatsApp',
-    'about.tag1': 'Front-end',
-    'about.tag2': 'Web design',
+    'about.lead': 'Eu sou o <strong>Yuri</strong>, mas pode me chamar de <strong>Chibo</strong>.',
+    'about.p1': 'Sou desenvolvedor front-end e web designer, e trabalho com uma ideia simples: site não é vitrine, é ferramenta de trabalho. A maioria dos sites por aí existe só pra "ter um site", e isso desperdiça uma das ferramentas mais poderosas que um negócio pode ter.',
+    'about.p2': 'O que eu faço é construir presença digital que <em>trabalha pelo seu negócio</em>. Sites que carregam rápido, comunicam bem, são fáceis de manter e, principalmente, geram resultado. Hoje atendo clientes no Brasil e nos Estados Unidos, em português e em inglês.',
+    'about.p3': 'Se você chegou até aqui, provavelmente tá pensando em mexer no seu digital. Bora conversar.',
+    'about.cta': 'Falar com Chibo no WhatsApp',
+    'about.tag1': 'Dev front-end',
+    'about.tag2': 'Web designer',
     'about.tag3': 'SEO',
     'about.tag4': 'UX',
 
@@ -142,13 +145,11 @@ const translations = {
     'faq.q2': 'Quanto custa?',
     'faq.a2': 'O orçamento é sob medida porque cada projeto tem um escopo diferente. Me conta o que você tá pensando e eu te mando uma proposta clara em até 2 dias úteis.',
     'faq.q3': 'Você usa template ou faz do zero?',
-    'faq.a3': 'Faço do zero, alinhado com a identidade do seu negócio. Template é caminho fácil pra ficar parecido com todo mundo — e isso é o oposto do que eu faço.',
-    'faq.q4': 'Que tecnologias você usa?',
-    'faq.a4': 'Stack moderno: HTML, CSS, JavaScript, frameworks como React/Next quando faz sentido, e ferramentas como WordPress quando o cliente precisa autonomia pra editar conteúdo. Escolho a tecnologia pelo projeto, não o contrário.',
+    'faq.a3': 'Faço do zero, alinhado com a identidade do seu negócio. Template é caminho fácil pra ficar parecido com todo mundo, e isso é o oposto do que eu faço.',
     'faq.q5': 'E depois que o site fica pronto?',
     'faq.a5': 'Ofereço suporte pós-entrega e planos de manutenção. Você não fica na mão.',
     'faq.q6': 'Você faz e-commerce ou site de agendamento?',
-    'faq.a6': 'Hoje meu foco total é em sites institucionais, landing pages e marca pessoal — é onde eu entrego o melhor resultado. Loja virtual e sistema de agendamento estão no meu radar pra breve. Se é isso que você precisa, me chama mesmo assim que a gente conversa.',
+    'faq.a6': 'Hoje meu foco total é em sites institucionais, landing pages e marca pessoal, é onde eu entrego o melhor resultado. Loja virtual e sistema de agendamento estão no meu radar pra breve. Se é isso que você precisa, me chama mesmo assim que a gente conversa.',
 
     'contact.title1': 'Vamos construir',
     'contact.title2': ' algo bom',
@@ -162,12 +163,15 @@ const translations = {
     'form.email': 'E-mail',
     'form.msg': 'Me conta sua ideia',
     'form.submit': 'Enviar mensagem',
+    'form.sending': 'Enviando…',
+    'form.success': 'Mensagem enviada! Respondo em até 24h.',
+    'form.error': 'Algo deu errado. Tenta de novo ou me chama no WhatsApp.',
 
     'footer.tagline': 'Bonito vende, funcional converte<br>e eu faço os dois.',
     'footer.nav': 'Navegação',
     'footer.contact': 'Contato',
     'footer.legal': 'Políticas e termos',
-    'footer.copyright': '© 2026 Yuri Chiba & chibodev.com · Todos os direitos reservados',
+    'footer.copyright': '© 2026 Chibo Dev · Yuri Chiba · São Paulo, Brasil · Todos os direitos reservados',
     'footer.lang': 'Idiomas',
     'footer.langs': 'Português · Inglês',
     'footer.made': 'Feito com muito café.',
@@ -222,9 +226,9 @@ const translations = {
     'services.inst.tag2': 'SEO',
     'services.inst.tag3': 'Identity',
     'services.brand.title': 'Personal brand websites',
-    'services.brand.desc': "For professionals, creators and anyone who needs a presence of their own, off the social feeds. A site that's truly yours — fast, easy to find on Google, with a links page of your own on your domain.",
+    'services.brand.desc': "For creators and professionals who want a presence of their own, off the feeds — easy to find on Google, with a links page on your domain.",
     'services.brand.tag1': 'Portfolio',
-    'services.brand.tag2': 'Links page',
+    'services.brand.tag2': 'Links',
     'services.brand.tag3': 'SEO',
 
     'work.title': 'Recent work',
@@ -285,9 +289,12 @@ const translations = {
     'testi.r2': 'Mentoria Route',
     'testi.q3': 'Paste a sentence from Caio here about the multi-page site and the hassle-free migration.',
     'testi.r3': 'Hidro-Sul',
+    'testi.q4': "Working with you was an excellent experience. Beyond understanding exactly what I wanted to convey with the site, you turned my ideas into something far more professional, beautiful and functional than I had imagined. The attention to detail, the fast turnaround and your availability throughout the whole process made all the difference in the final result.",
+    'testi.r4': 'Psychomotricity specialist',
 
+    'cta.eyebrow': '→ next step',
     'cta.title': 'Your next project could be the next case here.',
-    'cta.sub': "A 30-minute conversation, free and with no strings attached. You'll leave it knowing what can be done.",
+    'cta.sub': "A 30-minute conversation, free and with no strings attached. You'll leave it knowing what we can build together.",
     'cta.btn1': 'Start a conversation',
     'cta.btn2': 'Message on WhatsApp',
 
@@ -306,13 +313,13 @@ const translations = {
     'process.s4.meta': '+ 30 days support',
 
     'about.title': 'Hi, how are you?',
-    'about.lead': "I'm <strong>Yuri</strong> — but you can call me <strong>Chibo</strong>.",
-    'about.p1': "I'm a front-end developer and web designer, and for a while now I've been committed to a simple idea: a website isn't a showcase — it's a working tool. Most websites out there exist just to exist, and that's a waste of one of the most powerful tools a business can have.",
-    'about.p2': "What I do is build a digital presence that <em>works for your business</em>. Websites that load fast, communicate clearly, are easy to maintain — and, above all, deliver results. Today I work with clients in Brazil and the United States, in Portuguese and English.",
+    'about.lead': "I'm <strong>Yuri</strong>, but you can call me <strong>Chibo</strong>.",
+    'about.p1': "I'm a front-end developer and web designer, and I work from a simple idea: a website isn't a showcase, it's a working tool. Most sites out there exist just to exist, and that wastes one of the most powerful tools a business can have.",
+    'about.p2': "What I do is build a digital presence that <em>works for your business</em>. Sites that load fast, communicate clearly, are easy to maintain and, above all, deliver results. Today I work with clients in Brazil and the United States, in Portuguese and English.",
     'about.p3': "If you made it this far, you're probably thinking about reworking your digital presence. Let's talk.",
     'about.cta': 'Message Chibo on WhatsApp',
-    'about.tag1': 'Front-end',
-    'about.tag2': 'Web design',
+    'about.tag1': 'Front-end dev',
+    'about.tag2': 'Web designer',
     'about.tag3': 'SEO',
     'about.tag4': 'UX',
 
@@ -322,13 +329,11 @@ const translations = {
     'faq.q2': 'How much does it cost?',
     'faq.a2': "The price is custom because every project has a different scope. Tell me what you have in mind and I'll send you a clear proposal within 2 business days.",
     'faq.q3': 'Do you use templates or build from scratch?',
-    'faq.a3': "I build from scratch, aligned with your brand identity. Templates are the easy way to look like everyone else — and that's the opposite of what I do.",
-    'faq.q4': 'What technologies do you use?',
-    'faq.a4': 'A modern stack: HTML, CSS, JavaScript, frameworks like React/Next when it makes sense, and tools like WordPress when the client needs autonomy to edit content. I pick the tech for the project, not the other way around.',
+    'faq.a3': "I build from scratch, aligned with your brand identity. Templates are the easy way to look like everyone else, and that's the opposite of what I do.",
     'faq.q5': "What happens after the site is done?",
     'faq.a5': "I offer post-launch support and maintenance plans. You're never left on your own.",
     'faq.q6': 'Do you build e-commerce or booking sites?',
-    'faq.a6': "Right now my full focus is on company websites, landing pages and personal brands — that's where I deliver the best results. Online stores and booking systems are on my radar for soon. If that's what you need, reach out anyway and let's talk.",
+    'faq.a6': "Right now my full focus is on company websites, landing pages and personal brands, that's where I deliver the best results. Online stores and booking systems are on my radar for soon. If that's what you need, reach out anyway and let's talk.",
 
     'contact.title1': "Let's build",
     'contact.title2': ' something good',
@@ -342,12 +347,15 @@ const translations = {
     'form.email': 'Email',
     'form.msg': 'Tell me your idea',
     'form.submit': 'Send message',
+    'form.sending': 'Sending…',
+    'form.success': "Message sent! I'll reply within 24h.",
+    'form.error': 'Something went wrong. Try again or message me on WhatsApp.',
 
     'footer.tagline': 'Beautiful sells, functional converts,<br>and I do both.',
     'footer.nav': 'Navigation',
     'footer.contact': 'Contact',
     'footer.legal': 'Policies & terms',
-    'footer.copyright': '© 2026 Yuri Chiba & chibodev.com · All rights reserved',
+    'footer.copyright': '© 2026 Chibo Dev · Yuri Chiba · São Paulo, Brazil · All rights reserved',
     'footer.lang': 'Languages',
     'footer.langs': 'Portuguese · English',
     'footer.made': 'Made with lots of coffee.',
@@ -606,10 +614,11 @@ function updateProcessProgress() {
   const rect = processSection.getBoundingClientRect();
   const viewportH = window.innerHeight;
 
-  // Inicia animação quando o topo da seção chega aos 70% da tela
-  // Termina quando o final chega aos 30%
-  const start = viewportH * 0.7;
-  const end = viewportH * 0.3;
+  // Começa a preencher assim que a seção entra (topo a 80% da tela) e completa
+  // quando ela chega ao centro da tela. Antes era 70%→30%, o que só enchia
+  // tudo bem no fim do scroll.
+  const start = viewportH * 0.8;
+  const end = viewportH * 0.5;
 
   let progress = 0;
   if (rect.top <= start && rect.bottom >= end) {
@@ -623,23 +632,16 @@ function updateProcessProgress() {
   // Atualiza barra de progresso
   processProgress.style.width = (progress * 100) + '%';
 
-  // Ativa cada step quando a barra cruza ele
+  // A linha agora termina no 04, com os nós equidistantes (0, 1/3, 2/3, 1).
+  // Cada nó acende quando o preenchimento chega NELE — sincronizado com a linha.
+  const last = steps.length - 1;
+  let activeIdx = 0;
+  for (let i = 0; i < steps.length; i++) {
+    if (progress >= (last ? i / last : 0) - 0.001) activeIdx = i;
+  }
   steps.forEach((step, idx) => {
-    const stepProgress = (idx + 0.5) / steps.length;
-    step.classList.remove('is-active', 'is-passed');
-
-    if (progress >= stepProgress) {
-      step.classList.add('is-passed');
-    }
-
-    // O step ativo é aquele que a barra está atualmente cruzando
-    const stepStart = idx / steps.length;
-    const stepEnd = (idx + 1) / steps.length;
-    if (progress >= stepStart && progress < stepEnd) {
-      step.classList.add('is-active');
-    } else if (progress >= 1 && idx === steps.length - 1) {
-      step.classList.add('is-active');
-    }
+    step.classList.toggle('is-passed', idx < activeIdx);
+    step.classList.toggle('is-active', idx === activeIdx);
   });
 }
 
@@ -647,17 +649,101 @@ window.addEventListener('scroll', updateProcessProgress, { passive: true });
 window.addEventListener('resize', updateProcessProgress, { passive: true });
 updateProcessProgress();
 
-/* -------- Form submit (placeholder) -------- */
+/* -------- Process: linha termina no centro do círculo 04 (ancorada no nó) -------- */
+function layoutProcessTrack() {
+  const wrap = document.querySelector('.process__wrap');
+  const track = document.querySelector('.process__track');
+  const lastNum = document.querySelector('.process__list .step:last-child .step__num');
+  if (!wrap || !track || !lastNum) return;
+  // Em telas onde a track some (tablet/mobile), deixa o CSS no controle.
+  if (getComputedStyle(track).display === 'none') { track.style.right = ''; return; }
+  const wrapRect = wrap.getBoundingClientRect();
+  const numRect = lastNum.getBoundingClientRect();
+  const centerX = numRect.left + numRect.width / 2 - wrapRect.left;
+  track.style.right = Math.max(0, wrapRect.width - centerX) + 'px';
+}
+window.addEventListener('load', layoutProcessTrack, { passive: true });
+window.addEventListener('resize', layoutProcessTrack, { passive: true });
+layoutProcessTrack();
+
+/* -------- Form submit (Web3Forms) -------- */
+// Cole sua access key do Web3Forms aqui (https://web3forms.com).
+// Enquanto estiver com o valor padrão, o envio é bloqueado e avisa no console.
+const WEB3FORMS_KEY = 'COLE_SUA_ACCESS_KEY_AQUI';
+
 const form = document.getElementById('contactForm');
-form?.addEventListener('submit', (e) => {
+const formStatus = document.getElementById('formStatus');
+const formSubmit = document.getElementById('contactSubmit');
+
+function currentLang() {
+  return document.documentElement.lang.startsWith('pt') ? 'pt' : 'en';
+}
+function t(key) {
+  const lang = currentLang();
+  return (translations[lang] && translations[lang][key]) || '';
+}
+function setFormStatus(key, kind) {
+  if (!formStatus) return;
+  formStatus.textContent = t(key);
+  formStatus.classList.remove('form__status--ok', 'form__status--err');
+  if (kind) formStatus.classList.add('form__status--' + kind);
+  formStatus.hidden = false;
+}
+function setSubmitting(isSubmitting) {
+  if (!formSubmit) return;
+  formSubmit.disabled = isSubmitting;
+  const label = formSubmit.querySelector('[data-i18n="form.submit"]');
+  if (label) label.textContent = isSubmitting ? t('form.sending') : t('form.submit');
+}
+
+form?.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const data = new FormData(form);
-  const lang = document.documentElement.lang.startsWith('pt') ? 'pt' : 'en';
-  const msg = lang === 'pt'
-    ? 'Mensagem enviada! Vou responder em até 24h. (Configure backend: Formspree, Netlify Forms ou similar)'
-    : 'Message sent! I will reply within 24h. (Configure backend: Formspree, Netlify Forms or similar)';
-  alert(msg);
-  form.reset();
+
+  // Honeypot: bot preencheu o campo escondido — finge sucesso e ignora
+  if (form.querySelector('[name="botcheck"]')?.checked) {
+    setFormStatus('form.success', 'ok');
+    form.reset();
+    return;
+  }
+
+  // Validação nativa (o form usa novalidate, então disparamos manualmente)
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  if (WEB3FORMS_KEY === 'COLE_SUA_ACCESS_KEY_AQUI') {
+    console.warn('[Chibo Dev] Defina WEB3FORMS_KEY em main.js para ativar o formulário.');
+    setFormStatus('form.error', 'err');
+    return;
+  }
+
+  const payload = new FormData(form);
+  payload.append('access_key', WEB3FORMS_KEY);
+  payload.append('subject', 'Novo contato pelo site — Chibo Dev');
+  payload.append('from_name', 'Site Chibo Dev');
+
+  setSubmitting(true);
+  setFormStatus('form.sending', null);
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: payload
+    });
+    const data = await res.json();
+    if (res.ok && data.success) {
+      setFormStatus('form.success', 'ok');
+      form.reset();
+    } else {
+      setFormStatus('form.error', 'err');
+    }
+  } catch (err) {
+    setFormStatus('form.error', 'err');
+  } finally {
+    setSubmitting(false);
+  }
 });
 
 /* -------- Modal de case detail -------- */
@@ -834,6 +920,92 @@ document.addEventListener('keydown', (e) => {
 initTheme();
 initLang();
 updateHeader();
+
+
+/* -------- FAQ: accordion com animação de altura -------- */
+(function () {
+  var items = document.querySelectorAll('.faq__item');
+  if (!items.length) return;
+  // Quem prefere menos movimento (ou se o JS não rodar): <details> abre/fecha
+  // nativo, texto visível e ícone girando via [open]. Sem flash de layout aqui.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  items.forEach(function (item) {
+    var summary = item.querySelector('summary');
+    var answer = item.querySelector('.faq__answer');
+    if (!summary || !answer) return;
+    var p = answer.querySelector('p');
+
+    summary.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (item.dataset.animating) return;
+      item.dataset.animating = '1';
+      var closing = item.open;
+
+      var onEnd = function (ev) {
+        if (ev.target !== answer || ev.propertyName !== 'height') return;
+        answer.removeEventListener('transitionend', onEnd);
+        answer.style.height = '';
+        if (p) { p.style.opacity = ''; p.style.transform = ''; }
+        delete item.dataset.animating;
+        if (closing) item.open = false; // ícone volta a + ao terminar de fechar
+      };
+      answer.addEventListener('transitionend', onEnd);
+
+      if (!closing) {
+        item.open = true; // ícone gira pra − na hora; conteúdo passa a renderizar
+        var h = answer.scrollHeight;
+        answer.style.height = '0px';
+        if (p) { p.style.opacity = '0'; p.style.transform = 'translateY(6px)'; }
+        answer.offsetHeight; // reflow: fixa o ponto de partida
+        answer.style.height = h + 'px';
+        if (p) { p.style.opacity = '1'; p.style.transform = 'translateY(0)'; }
+      } else {
+        answer.style.height = answer.scrollHeight + 'px';
+        answer.offsetHeight; // reflow
+        answer.style.height = '0px';
+        if (p) { p.style.opacity = '0'; p.style.transform = 'translateY(6px)'; }
+      }
+    });
+  });
+})();
+
+
+/* -------- Depoimentos: carrossel (scroll-snap + setas) -------- */
+(function () {
+  var track = document.getElementById('testiTrack');
+  var controls = document.getElementById('testiControls');
+  if (!track || !controls) return;
+  var prev = controls.querySelector('[data-testi="prev"]');
+  var next = controls.querySelector('[data-testi="next"]');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function pageWidth() {
+    var card = track.querySelector('.testimonial');
+    if (!card) return track.clientWidth;
+    var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    var cardStep = card.offsetWidth + gap;
+    // quantos cards completos cabem na área visível (3 / 2 / 1 conforme a tela)
+    var perPage = Math.max(1, Math.round((track.clientWidth + gap) / cardStep));
+    return perPage * cardStep;
+  }
+  function update() {
+    var max = track.scrollWidth - track.clientWidth - 1;
+    var overflowing = track.scrollWidth > track.clientWidth + 1;
+    controls.style.display = overflowing ? '' : 'none';
+    if (prev) prev.disabled = track.scrollLeft <= 0;
+    if (next) next.disabled = track.scrollLeft >= max;
+  }
+  function go(dir) {
+    track.scrollBy({ left: dir * pageWidth(), behavior: reduce ? 'auto' : 'smooth' });
+  }
+  if (prev) prev.addEventListener('click', function () { go(-1); });
+  if (next) next.addEventListener('click', function () { go(1); });
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  window.addEventListener('load', update);
+  update();
+})();
 
 
 /* ==========================================================

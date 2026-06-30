@@ -16,6 +16,55 @@
   var state = null;
   var lastFocus = null;
 
+  /* ---------- i18n (segue document.documentElement.lang) ---------- */
+  var STRINGS = {
+    pt: {
+      bannerLabel: 'Aviso de cookies',
+      bannerTitle: 'Cookies por aqui',
+      bannerText: 'Uso cookies pra lembrar suas preferências e entender como o site é usado. Você escolhe o que aceitar. Detalhes na ',
+      cookiePolicy: 'Política de Cookies',
+      acceptAll: 'Aceitar todos',
+      reject: 'Recusar não essenciais',
+      customize: 'Personalizar',
+      modalTitle: 'Preferências de cookies',
+      modalSub: 'Ative ou desative cada categoria. Os essenciais mantêm o site funcionando e ficam sempre ligados.',
+      close: 'Fechar',
+      save: 'Salvar preferências',
+      alwaysOn: 'sempre ativos',
+      necessaryName: 'Necessários',
+      necessaryDesc: 'Garantem o básico: lembram seu tema (claro/escuro), idioma e o próprio registro do seu consentimento. Não podem ser desativados.',
+      analyticsName: 'Desempenho e análise',
+      analyticsDesc: 'Ajudam a entender como o site é usado — páginas visitadas, origem do acesso — pra melhorar a experiência. Só ativam com a sua autorização.',
+      functionalityName: 'Funcionalidade',
+      functionalityDesc: 'Habilitam recursos extras e conteúdos de terceiros incorporados. Sem eles, algumas partes podem não funcionar como esperado.'
+    },
+    en: {
+      bannerLabel: 'Cookie notice',
+      bannerTitle: 'Cookies here',
+      bannerText: 'I use cookies to remember your preferences and understand how the site is used. You choose what to accept. Details in the ',
+      cookiePolicy: 'Cookie Policy',
+      acceptAll: 'Accept all',
+      reject: 'Reject non-essential',
+      customize: 'Customize',
+      modalTitle: 'Cookie preferences',
+      modalSub: 'Turn each category on or off. Essential cookies keep the site working and stay always on.',
+      close: 'Close',
+      save: 'Save preferences',
+      alwaysOn: 'always on',
+      necessaryName: 'Essential',
+      necessaryDesc: "They cover the basics: they remember your theme (light/dark), language and your own consent record. They can't be turned off.",
+      analyticsName: 'Performance & analytics',
+      analyticsDesc: 'They help understand how the site is used — pages visited, traffic source — to improve the experience. Only enabled with your permission.',
+      functionalityName: 'Functionality',
+      functionalityDesc: 'They enable extra features and embedded third-party content. Without them, some parts may not work as expected.'
+    }
+  };
+  function L() {
+    var l = (document.documentElement.lang || 'pt').toLowerCase();
+    return l.indexOf('en') === 0 ? 'en' : 'pt';
+  }
+  function t(k) { return STRINGS[L()][k]; }
+
   /* ---------- Persistência ---------- */
   function read() {
     try {
@@ -47,14 +96,14 @@
 
   function bannerHTML() {
     return '' +
-      '<div class="cc-banner" id="ccBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">' +
-        '<div class="cc-banner__title">' + ICON_COOKIE + 'Cookies por aqui</div>' +
-        '<p class="cc-banner__text">Uso cookies pra lembrar suas preferências e entender como o site é usado. Você escolhe o que aceitar. Detalhes na <a href="politica-de-cookies.html">Política de Cookies</a>.</p>' +
+      '<div class="cc-banner" id="ccBanner" role="dialog" aria-live="polite" aria-label="' + t('bannerLabel') + '">' +
+        '<div class="cc-banner__title">' + ICON_COOKIE + t('bannerTitle') + '</div>' +
+        '<p class="cc-banner__text">' + t('bannerText') + '<a href="politica-de-cookies.html">' + t('cookiePolicy') + '</a>.</p>' +
         '<div class="cc-banner__actions">' +
-          '<button type="button" class="cc-btn cc-btn--primary" data-cc="accept-all">Aceitar todos</button>' +
+          '<button type="button" class="cc-btn cc-btn--primary" data-cc="accept-all">' + t('acceptAll') + '</button>' +
           '<div class="cc-banner__row">' +
-            '<button type="button" class="cc-btn cc-btn--ghost" data-cc="reject">Recusar não essenciais</button>' +
-            '<button type="button" class="cc-btn cc-btn--text" data-cc="customize">Personalizar</button>' +
+            '<button type="button" class="cc-btn cc-btn--ghost" data-cc="reject">' + t('reject') + '</button>' +
+            '<button type="button" class="cc-btn cc-btn--text" data-cc="customize">' + t('customize') + '</button>' +
           '</div>' +
         '</div>' +
       '</div>';
@@ -67,21 +116,21 @@
         '<div class="cc-modal__panel" role="document">' +
           '<div class="cc-modal__head">' +
             '<div>' +
-              '<h2 class="cc-modal__title" id="ccModalTitle">Preferências de cookies</h2>' +
-              '<p class="cc-modal__sub">Ative ou desative cada categoria. Os essenciais mantêm o site funcionando e ficam sempre ligados.</p>' +
+              '<h2 class="cc-modal__title" id="ccModalTitle">' + t('modalTitle') + '</h2>' +
+              '<p class="cc-modal__sub">' + t('modalSub') + '</p>' +
             '</div>' +
-            '<button type="button" class="cc-modal__close" data-cc-close aria-label="Fechar">' + ICON_X + '</button>' +
+            '<button type="button" class="cc-modal__close" data-cc-close aria-label="' + t('close') + '">' + ICON_X + '</button>' +
           '</div>' +
           '<div class="cc-modal__body">' +
-            cat('Necessários', 'Garantem o básico: lembram seu tema (claro/escuro), idioma e o próprio registro do seu consentimento. Não podem ser desativados.', null, true) +
-            cat('Desempenho e análise', 'Ajudam a entender como o site é usado — páginas visitadas, origem do acesso — pra melhorar a experiência. Só ativam com a sua autorização.', 'analytics', false) +
-            cat('Funcionalidade', 'Habilitam recursos extras e conteúdos de terceiros incorporados. Sem eles, algumas partes podem não funcionar como esperado.', 'functionality', false) +
+            cat(t('necessaryName'), t('necessaryDesc'), null, true) +
+            cat(t('analyticsName'), t('analyticsDesc'), 'analytics', false) +
+            cat(t('functionalityName'), t('functionalityDesc'), 'functionality', false) +
           '</div>' +
           '<div class="cc-modal__foot">' +
-            '<button type="button" class="cc-btn cc-btn--primary" data-cc="save">Salvar preferências</button>' +
+            '<button type="button" class="cc-btn cc-btn--primary" data-cc="save">' + t('save') + '</button>' +
             '<div class="cc-modal__foot-row">' +
-              '<button type="button" class="cc-btn cc-btn--ghost" data-cc="reject">Recusar não essenciais</button>' +
-              '<button type="button" class="cc-btn cc-btn--ghost" data-cc="accept-all">Aceitar todos</button>' +
+              '<button type="button" class="cc-btn cc-btn--ghost" data-cc="reject">' + t('reject') + '</button>' +
+              '<button type="button" class="cc-btn cc-btn--ghost" data-cc="accept-all">' + t('acceptAll') + '</button>' +
             '</div>' +
           '</div>' +
         '</div>' +
@@ -90,7 +139,7 @@
 
   function cat(name, desc, key, always) {
     var input = always
-      ? '<input type="checkbox" checked disabled aria-label="' + name + ' (sempre ativos)">'
+      ? '<input type="checkbox" checked disabled aria-label="' + name + ' (' + t('alwaysOn') + ')">'
       : '<input type="checkbox" data-cc-cat="' + key + '" aria-label="' + name + '">';
     return '' +
       '<div class="cc-cat">' +
@@ -105,14 +154,28 @@
   /* ---------- Elementos ---------- */
   var banner, modal, panel;
 
-  function inject() {
+  function buildDOM() {
+    if (banner) banner.remove();
+    if (modal) modal.remove();
     var wrap = document.createElement('div');
     wrap.innerHTML = bannerHTML() + modalHTML();
     while (wrap.firstChild) document.body.appendChild(wrap.firstChild);
     banner = document.getElementById('ccBanner');
     modal = document.getElementById('ccModal');
     panel = modal.querySelector('.cc-modal__panel');
-    bind();
+  }
+
+  /* Reconstrói no idioma atual, preservando o estado visível (banner/modal) */
+  function rerender() {
+    var bannerVisible = banner && banner.classList.contains('is-visible');
+    var modalOpen = modal && !modal.hidden;
+    buildDOM();
+    if (bannerVisible) banner.classList.add('is-visible');
+    if (modalOpen) {
+      modal.hidden = false;
+      modal.classList.add('is-open');
+      syncToggles();
+    }
   }
 
   /* ---------- Banner ---------- */
@@ -205,7 +268,16 @@
 
   /* ---------- Init ---------- */
   function init() {
-    inject();
+    buildDOM();
+    bind();
+    // Re-renderiza quando o idioma do site muda (toggle PT/EN)
+    if (window.MutationObserver) {
+      new MutationObserver(function (muts) {
+        for (var i = 0; i < muts.length; i++) {
+          if (muts[i].attributeName === 'lang') { rerender(); break; }
+        }
+      }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    }
     state = read();
     if (state) fire();      // já decidiu antes — aplica e dispara onChange
     else showBanner();      // primeiro acesso

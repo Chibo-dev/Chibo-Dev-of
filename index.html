@@ -5,14 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Criação de sites sob medida: landing pages, sites institucionais e de marca pessoal, feitos do zero pra converter. Front-end e web design no Brasil e nos EUA." />
   <meta name="author" content="Chibo Dev" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="canonical" href="https://chibodev.com/" />
+
+  <title>Chibo Dev · Criação de Sites que Convertem</title>
+
+  <!-- Favicons (substitua pelos arquivos do seu sistema de favicon) -->
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 
   <!-- Open Graph -->
+  <meta property="og:site_name" content="Chibo Dev" />
   <meta property="og:title" content="Chibo Dev · Criação de Sites que Convertem" />
   <meta property="og:description" content="Sites feitos do zero pra quem quer ser levado a sério. Bonito vende, funcional converte e eu faço os dois." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://chibodev.com" />
+  <meta property="og:url" content="https://chibodev.com/" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <!-- Imagem 1200x630 · crie em assets/img/og-image.jpg -->
+  <meta property="og:image" content="https://chibodev.com/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Chibo Dev — criação de sites que convertem" />
 
-  <title>Chibo Dev · Criação de Sites que Convertem</title>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chibo Dev · Criação de Sites que Convertem" />
+  <meta name="twitter:description" content="Sites feitos do zero pra quem quer ser levado a sério. Bonito vende, funcional converte e eu faço os dois." />
+  <meta name="twitter:image" content="https://chibodev.com/assets/img/og-image.jpg" />
 
   <!-- Fonte: Geist (Vercel) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,6 +42,62 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Dados estruturados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://chibodev.com/#business",
+        "name": "Chibo Dev",
+        "url": "https://chibodev.com/",
+        "image": "https://chibodev.com/assets/img/og-image.jpg",
+        "description": "Criação de sites sob medida: landing pages, sites institucionais e de marca pessoal, feitos do zero pra converter. Front-end e web design no Brasil e nos EUA.",
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "Country", "name": "Brasil" },
+          { "@type": "Country", "name": "Estados Unidos" }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "founder": { "@id": "https://chibodev.com/#chibo" },
+        "knowsLanguage": ["pt-BR", "en"],
+        "sameAs": ["https://instagram.com/chibodev"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "contato@chibodev.com",
+          "availableLanguage": ["Portuguese", "English"]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://chibodev.com/#chibo",
+        "name": "Yuri Chiba",
+        "alternateName": "Chibo",
+        "jobTitle": "Desenvolvedor front-end e web designer",
+        "url": "https://chibodev.com/",
+        "worksFor": { "@id": "https://chibodev.com/#business" },
+        "knowsLanguage": ["pt-BR", "en"],
+        "sameAs": ["https://instagram.com/chibodev"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://chibodev.com/#website",
+        "url": "https://chibodev.com/",
+        "name": "Chibo Dev",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://chibodev.com/#business" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -203,11 +281,11 @@
           <div class="service__num">03</div>
           <h3 class="service__title" data-i18n="services.brand.title">Sites de marca pessoal</h3>
           <p class="service__desc" data-i18n="services.brand.desc">
-            Pra profissionais, criadores e quem precisa de uma presença própria fora das redes. Um site só seu — rápido, fácil de achar no Google e com uma página de links própria, no seu domínio.
+            Pra criadores e profissionais que querem uma presença própria fora das redes — fácil de achar no Google e com página de links no domínio.
           </p>
           <ul class="service__tags">
             <li data-i18n="services.brand.tag1">Portfólio</li>
-            <li data-i18n="services.brand.tag2">Página de links</li>
+            <li data-i18n="services.brand.tag2">Links</li>
             <li data-i18n="services.brand.tag3">SEO</li>
           </ul>
         </article>
@@ -528,7 +606,8 @@
         <p class="section-head__sub" data-i18n="testi.sub">Logo prova que o cliente existe. Depoimento prova que o trabalho funcionou.</p>
       </header>
 
-      <div class="testimonials__grid">
+      <div class="testimonials__carousel">
+        <div class="testimonials__track" id="testiTrack">
 
         <!-- ACES — destaque (EUA) -->
         <figure class="testimonial testimonial--featured is-empty">
@@ -541,6 +620,21 @@
             <span class="testimonial__id">
               <span class="testimonial__name">Rayffa <span class="testimonial__flag"><svg class="flag-us" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estados Unidos"><rect width="24" height="16" fill="#FBFBF9"/><g fill="#E0A6A6"><rect width="24" height="2.286"/><rect y="4.571" width="24" height="2.286"/><rect y="9.143" width="24" height="2.286"/><rect y="13.714" width="24" height="2.286"/></g><rect width="9.6" height="9.143" fill="#AAB6DC"/><g fill="#FBFBF9"><circle cx="2.4" cy="2.3" r=".55"/><circle cx="4.8" cy="2.3" r=".55"/><circle cx="7.2" cy="2.3" r=".55"/><circle cx="2.4" cy="4.57" r=".55"/><circle cx="4.8" cy="4.57" r=".55"/><circle cx="7.2" cy="4.57" r=".55"/><circle cx="2.4" cy="6.85" r=".55"/><circle cx="4.8" cy="6.85" r=".55"/><circle cx="7.2" cy="6.85" r=".55"/></g></svg></span></span>
               <span class="testimonial__role" data-i18n="testi.r1">ACES Electrical Services · EUA</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <!-- Daphine Santana -->
+        <figure class="testimonial">
+          <div class="testimonial__mark" aria-hidden="true">“</div>
+          <blockquote class="testimonial__quote" data-i18n="testi.q4">
+            Trabalhar com você foi uma experiência excelente. Além de compreender exatamente o que eu queria transmitir com o site, você conseguiu transformar minhas ideias em algo muito mais profissional, bonito e funcional do que eu imaginava. O cuidado com os detalhes, a agilidade nas entregas e a disponibilidade durante todo o processo fizeram toda a diferença no resultado final.
+          </blockquote>
+          <figcaption class="testimonial__author">
+            <img class="testimonial__avatar" src="assets/img/daphine-santana-depoimento.webp" alt="Daphine Santana" width="42" height="42" loading="lazy">
+            <span class="testimonial__id">
+              <span class="testimonial__name">Daphine Santana</span>
+              <span class="testimonial__role" data-i18n="testi.r4">Psicomotricista</span>
             </span>
           </figcaption>
         </figure>
@@ -575,6 +669,16 @@
           </figcaption>
         </figure>
 
+        </div>
+
+        <div class="testimonials__controls" id="testiControls">
+          <button class="testimonials__arrow" type="button" data-testi="prev" aria-label="Depoimento anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <button class="testimonials__arrow" type="button" data-testi="next" aria-label="Próximo depoimento">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -585,12 +689,16 @@
   <section class="cta-band">
     <div class="container cta-band__inner">
       <div class="cta-band__text">
+        <span class="cta-band__eyebrow" data-i18n="cta.eyebrow">→ próximo passo</span>
         <h2 class="cta-band__title" data-i18n="cta.title">Seu próximo projeto pode ser o próximo case aqui.</h2>
-        <p class="cta-band__sub" data-i18n="cta.sub">Uma conversa de 30 minutos, sem custo e sem compromisso. Você sai dela sabendo o que dá pra fazer.</p>
+        <p class="cta-band__sub" data-i18n="cta.sub">Uma conversa de 30 minutos, sem custo e sem compromisso. Você sai dela sabendo o que podemos construir juntos.</p>
       </div>
       <div class="cta-band__actions">
         <a href="#contact" class="btn btn--primary" data-i18n="cta.btn1">Começar uma conversa</a>
-        <a href="https://wa.me/5511981783418" target="_blank" rel="noopener" class="btn btn--ghost" data-i18n="cta.btn2">Chamar no WhatsApp</a>
+        <a href="https://wa.me/5511981783418" target="_blank" rel="noopener" class="btn btn--ghost">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span data-i18n="cta.btn2">Chamar no WhatsApp</span>
+        </a>
       </div>
     </div>
   </section>
@@ -660,8 +768,8 @@
           <span>C</span>
         </div>
         <div class="about__tags">
-          <span class="about__tag" data-i18n="about.tag1">Front-end</span>
-          <span class="about__tag" data-i18n="about.tag2">Web design</span>
+          <span class="about__tag" data-i18n="about.tag1">Dev front-end</span>
+          <span class="about__tag" data-i18n="about.tag2">Web designer</span>
           <span class="about__tag" data-i18n="about.tag3">SEO</span>
           <span class="about__tag" data-i18n="about.tag4">UX</span>
         </div>
@@ -674,24 +782,24 @@
         </header>
 
         <p class="about__lead" data-i18n="about.lead">
-          Eu sou o <strong>Yuri</strong> — mas pode me chamar de <strong>Chibo</strong>.
+          Eu sou o <strong>Yuri</strong>, mas pode me chamar de <strong>Chibo</strong>.
         </p>
 
         <p data-i18n="about.p1">
-          Sou desenvolvedor front-end e web designer, e há algum tempo eu venho me dedicando a uma ideia simples: site não é vitrine, é ferramenta de trabalho. A maioria dos sites que existem por aí estão lá só pra "ter um site" — e isso é um desperdício de uma das ferramentas mais poderosas que um negócio pode ter.
+          Sou desenvolvedor front-end e web designer, e trabalho com uma ideia simples: site não é vitrine, é ferramenta de trabalho. A maioria dos sites por aí existe só pra "ter um site", e isso desperdiça uma das ferramentas mais poderosas que um negócio pode ter.
         </p>
 
         <p data-i18n="about.p2">
-          O que eu faço é construir presença digital que <em>trabalha pelo seu negócio</em>. Sites que carregam rápido, comunicam bem, são fáceis de manter e — principalmente — geram resultado. Hoje atendo clientes no Brasil e nos Estados Unidos, em português e em inglês.
+          O que eu faço é construir presença digital que <em>trabalha pelo seu negócio</em>. Sites que carregam rápido, comunicam bem, são fáceis de manter e, principalmente, geram resultado. Hoje atendo clientes no Brasil e nos Estados Unidos, em português e em inglês.
         </p>
 
         <p data-i18n="about.p3">
-          Se você chegou aqui, provavelmente tá pensando em mexer no seu digital. Bora conversar.
+          Se você chegou até aqui, provavelmente tá pensando em mexer no seu digital. Bora conversar.
         </p>
 
         <a href="https://wa.me/5511981783418" class="btn btn--primary about__cta" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.3.7 2.9 1.1 4.5 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
-          <span data-i18n="about.cta">Falar com o Chibo no WhatsApp</span>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span data-i18n="about.cta">Falar com Chibo no WhatsApp</span>
         </a>
       </div>
 
@@ -736,17 +844,7 @@
             <span class="faq__icon" aria-hidden="true"></span>
           </summary>
           <div class="faq__answer">
-            <p data-i18n="faq.a3">Faço do zero, alinhado com a identidade do seu negócio. Template é caminho fácil pra ficar parecido com todo mundo — e isso é o oposto do que eu faço.</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary>
-            <span data-i18n="faq.q4">Que tecnologias você usa?</span>
-            <span class="faq__icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq__answer">
-            <p data-i18n="faq.a4">Stack moderno: HTML, CSS, JavaScript, frameworks como React/Next quando faz sentido, e ferramentas como WordPress quando o cliente precisa autonomia pra editar conteúdo. Escolho a tecnologia pelo projeto, não o contrário.</p>
+            <p data-i18n="faq.a3">Faço do zero, alinhado com a identidade do seu negócio. Template é caminho fácil pra ficar parecido com todo mundo, e isso é o oposto do que eu faço.</p>
           </div>
         </details>
 
@@ -766,7 +864,7 @@
             <span class="faq__icon" aria-hidden="true"></span>
           </summary>
           <div class="faq__answer">
-            <p data-i18n="faq.a6">Hoje meu foco total é em sites institucionais, landing pages e marca pessoal — é onde eu entrego o melhor resultado. Loja virtual e sistema de agendamento estão no meu radar pra breve. Se é isso que você precisa, me chama mesmo assim que a gente conversa.</p>
+            <p data-i18n="faq.a6">Hoje meu foco total é em sites institucionais, landing pages e marca pessoal, é onde eu entrego o melhor resultado. Loja virtual e sistema de agendamento estão no meu radar pra breve. Se é isso que você precisa, me chama mesmo assim que a gente conversa.</p>
           </div>
         </details>
 
@@ -804,12 +902,6 @@
               <span class="channel__value">contato@chibodev.com</span>
             </a>
           </div>
-
-          <ul class="contact__assurances">
-            <li><span class="contact__assurances-check" aria-hidden="true"></span><span data-i18n="contact.assure1">Escopo, prazo e valor fechados antes de começar</span></li>
-            <li><span class="contact__assurances-check" aria-hidden="true"></span><span data-i18n="contact.assure2">30 dias de suporte inclusos após a entrega</span></li>
-            <li><span class="contact__assurances-check" aria-hidden="true"></span><span data-i18n="contact.assure3">Resposta em até 24h, sempre com uma pessoa de verdade</span></li>
-          </ul>
         </div>
 
         <form class="contact__form" id="contactForm" novalidate>
@@ -821,15 +913,24 @@
             <label for="email" data-i18n="form.email">E-mail</label>
             <input type="email" id="email" name="email" required />
           </div>
-          <div class="field">
+          <div class="field field--grow">
             <label for="message" data-i18n="form.msg">Me conta sua ideia</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn btn--primary btn--block">
+          <!-- Honeypot anti-spam (não preencher) -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
+          <button type="submit" class="btn btn--primary btn--block" id="contactSubmit">
             <span data-i18n="form.submit">Enviar mensagem</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite" hidden></p>
         </form>
+
+        <ul class="contact__assurances">
+          <li><span class="contact__assurances-check" aria-hidden="true"></span><span data-i18n="contact.assure1">Escopo, prazo e valor fechados antes de começar</span></li>
+          <li><span class="contact__assurances-check" aria-hidden="true"></span><span data-i18n="contact.assure2">30 dias de suporte inclusos após a entrega</span></li>
+          <li><span class="contact__assurances-check" aria-hidden="true"></span><span data-i18n="contact.assure3">Resposta em até 24h, sempre com uma pessoa de verdade</span></li>
+        </ul>
 
       </div>
     </div>
@@ -844,6 +945,14 @@
         <div class="footer__brand">
           <div class="logo">Chibo Dev<span class="logo__dot">.</span></div>
           <p data-i18n="footer.tagline">Bonito vende, funcional converte<br>e eu faço os dois.</p>
+          <div class="footer__social">
+            <a href="https://instagram.com/chibodev" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/yuri-chiba/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V23h-4V8z"/></svg>
+            </a>
+          </div>
         </div>
 
         <div class="footer__col">
@@ -858,21 +967,24 @@
         <div class="footer__col">
           <h4 data-i18n="footer.contact">Contato</h4>
           <a href="mailto:contato@chibodev.com">contato@chibodev.com</a>
-          <a href="https://wa.me/5511981783418" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://instagram.com/chibodev" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://wa.me/5511981783418" target="_blank" rel="noopener" class="footer__wa">
+            <svg class="footer__wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            +55 (11) 98178-3418
+          </a>
         </div>
 
         <div class="footer__col">
           <h4 data-i18n="footer.legal">Políticas e termos</h4>
+          <a href="#" data-cookie-prefs data-i18n="footer.prefs">Preferências de cookies</a>
           <a href="politica-de-privacidade.html" data-i18n="footer.privacy">Política de Privacidade</a>
           <a href="politica-de-cookies.html" data-i18n="footer.cookies">Política de Cookies</a>
           <a href="termos-de-uso.html" data-i18n="footer.terms">Termos de Uso</a>
-          <a href="#" data-cookie-prefs data-i18n="footer.prefs">Preferências de cookies</a>
         </div>
       </div>
 
       <div class="footer__bottom">
-        <span data-i18n="footer.copyright">© 2026 Yuri Chiba &amp; chibodev.com · Todos os direitos reservados</span>
+        <!-- Quando o CNPJ sair: trocar por "© 2026 Chibo Dev · Yuri Chiba — CNPJ XX.XXX.XXX/0001-XX · São Paulo, Brasil · Todos os direitos reservados" (atualizar também em main.js: footer.copyright PT/EN) -->
+        <span data-i18n="footer.copyright">© 2026 Chibo Dev · Yuri Chiba · São Paulo, Brasil · Todos os direitos reservados</span>
         <span data-i18n="footer.made">Feito com muito café.</span>
       </div>
     </div>
@@ -880,7 +992,7 @@
 
   <!-- WhatsApp flutuante -->
   <a href="https://wa.me/5511981783418" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.3.7 2.9 1.1 4.5 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
   </a>
 
   <!-- ============================================== -->

@@ -10,6 +10,12 @@
   <meta property="og:description" content="Como a Chibo Dev coleta, usa, compartilha e protege os seus dados pessoais, em conformidade com a LGPD." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://chibodev.com/politica-de-privacidade.html" />
+  <meta property="og:image" content="https://chibodev.com/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Chibo Dev — criação de sites que convertem" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://chibodev.com/assets/img/og-image.jpg" />
   <link rel="canonical" href="https://chibodev.com/politica-de-privacidade.html" />
   <title>Política de Privacidade | Chibo Dev</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,23 +25,28 @@
 </head>
 <body>
   <a id="top"></a>
-  <header class="header" id="header">
+    <header class="header" id="header">
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="Chibo Dev">
         Chibo Dev<span class="logo__dot">.</span>
       </a>
       <nav class="nav" aria-label="Navegação principal">
-        <a href="index.html#services">Serviços</a>
-        <a href="index.html#work">Trabalhos</a>
-        <a href="index.html#process">Processo</a>
-        <a href="index.html#about">Sobre</a>
+        <a href="index.html#services" data-i18n="nav.services">Serviços</a>
+        <a href="index.html#work" data-i18n="nav.work">Trabalhos</a>
+        <a href="index.html#process" data-i18n="nav.process">Processo</a>
+        <a href="index.html#about" data-i18n="nav.about">Sobre</a>
       </nav>
       <div class="header__actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Trocar idioma">
+          <span class="lang-toggle__opt is-active" data-lang="pt">PT</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+        </button>
         <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
           <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
           <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="index.html#contact" class="btn btn--primary btn--sm"><span>Começar projeto</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="index.html#contact" class="btn btn--primary btn--sm"><span data-i18n="nav.cta">Começar projeto</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
   </header>
@@ -190,43 +201,58 @@
     </div>
   </div>
 
-  <footer class="footer">
+    <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
           <div class="logo">Chibo Dev<span class="logo__dot">.</span></div>
-          <p>Bonito vende, funcional converte<br>e eu faço os dois.</p>
+          <p data-i18n="footer.tagline">Bonito vende, funcional converte<br>e eu faço os dois.</p>
+          <div class="footer__social">
+            <a href="https://instagram.com/chibodev" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/yuri-chiba/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V23h-4V8z"/></svg>
+            </a>
+          </div>
         </div>
+
         <div class="footer__col">
-          <h4>Navegação</h4>
-          <a href="index.html">Início</a>
-          <a href="index.html#services">Serviços</a>
-          <a href="index.html#work">Trabalhos</a>
-          <a href="index.html#process">Processo</a>
-          <a href="index.html#about">Sobre</a>
+          <h4 data-i18n="footer.nav">Navegação</h4>
+          <a href="index.html" data-i18n="nav.home">Início</a>
+          <a href="index.html#services" data-i18n="nav.services">Serviços</a>
+          <a href="index.html#work" data-i18n="nav.work">Trabalhos</a>
+          <a href="index.html#process" data-i18n="nav.process">Processo</a>
+          <a href="index.html#about" data-i18n="nav.about">Sobre</a>
         </div>
+
         <div class="footer__col">
-          <h4>Contato</h4>
+          <h4 data-i18n="footer.contact">Contato</h4>
           <a href="mailto:contato@chibodev.com">contato@chibodev.com</a>
-          <a href="https://wa.me/5511981783418" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://instagram.com/chibodev" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://wa.me/5511981783418" target="_blank" rel="noopener" class="footer__wa">
+            <svg class="footer__wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            +55 (11) 98178-3418
+          </a>
         </div>
+
         <div class="footer__col">
-          <h4>Políticas e termos</h4>
-          <a href="politica-de-privacidade.html">Política de Privacidade</a>
-          <a href="politica-de-cookies.html">Política de Cookies</a>
-          <a href="termos-de-uso.html">Termos de Uso</a>
-          <a href="#" data-cookie-prefs>Preferências de cookies</a>
+          <h4 data-i18n="footer.legal">Políticas e termos</h4>
+          <a href="#" data-cookie-prefs data-i18n="footer.prefs">Preferências de cookies</a>
+          <a href="politica-de-privacidade.html" data-i18n="footer.privacy">Política de Privacidade</a>
+          <a href="politica-de-cookies.html" data-i18n="footer.cookies">Política de Cookies</a>
+          <a href="termos-de-uso.html" data-i18n="footer.terms">Termos de Uso</a>
         </div>
       </div>
+
       <div class="footer__bottom">
-        <span>© 2026 Yuri Chiba &amp; chibodev.com · Todos os direitos reservados</span>
-        <span>Feito com muito café.</span>
+        <!-- Quando o CNPJ sair: trocar por "© 2026 Chibo Dev · Yuri Chiba — CNPJ XX.XXX.XXX/0001-XX · São Paulo, Brasil · Todos os direitos reservados" (atualizar também em main.js: footer.copyright PT/EN) -->
+        <span data-i18n="footer.copyright">© 2026 Chibo Dev · Yuri Chiba · São Paulo, Brasil · Todos os direitos reservados</span>
+        <span data-i18n="footer.made">Feito com muito café.</span>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/5511981783418" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.5-1.4c1.3.7 2.9 1.1 4.5 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
+  <a href="https://wa.me/5511981783418" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
 
   <script src="assets/js/main.js"></script>
   <script src="assets/js/cookie-consent.js"></script>
