@@ -174,6 +174,9 @@
       <span class="hero-pill hero-pill--2" data-i18n="hero.pill2">★ muito café</span>
       <span class="hero-pill hero-pill--3" data-i18n="hero.pill3">{ código limpo }</span>
       <span class="hero-pill hero-pill--4" data-i18n="hero.pill4">+ velocidade</span>
+      <span class="hero-pill hero-pill--5" data-i18n="hero.pill5">Dev front-end</span>
+      <span class="hero-pill hero-pill--6" data-i18n="hero.pill6">Web designer</span>
+      <span class="hero-pill hero-pill--7" data-i18n="hero.pill7">PT / EN</span>
     </div>
 
     <div class="container hero__container">
@@ -226,13 +229,18 @@
     <div class="container">
       <p class="logos__title" data-i18n="logos.title">Quem já confiou no meu trabalho</p>
       <div class="logos__row">
-        <!-- Logos: PNG transparente, ~80px de altura · assets/img/logo-*.png -->
-        <img class="logo-img" src="assets/img/logo-aces.png" alt="ACES Electrical Services" loading="lazy" decoding="async" />
-        <img class="logo-img" src="assets/img/logo-hidro-sul.png" alt="Hidro-Sul" loading="lazy" decoding="async" />
-        <img class="logo-img" src="assets/img/logo-mentoria-route.png" alt="Mentoria Route" loading="lazy" decoding="async" />
-        <img class="logo-img" src="assets/img/logo-daphine-santana.png" alt="Daphine Santana" loading="lazy" decoding="async" />
-        <img class="logo-img" src="assets/img/logo-quilombo-doces.png" alt="Quilombo Doces" loading="lazy" decoding="async" />
-        <img class="logo-img" src="assets/img/logo-coopmed.png" alt="Coopmed Mogi" loading="lazy" decoding="async" />
+        <!-- Logos: PNG transparente · monocromático branco via CSS · ordem = Trabalhos recentes -->
+        <img class="logo-img logo-img--dark" src="assets/img/hidro-sul-logo-extensa-branca-fundo-transparente.png" alt="Hidro-Sul" loading="lazy" decoding="async" onerror="this.remove()" />
+        <img class="logo-img logo-img--light" src="assets/img/hidro-sul-logo-extensa-fundo-transparente.png" alt="Hidro-Sul" loading="lazy" decoding="async" onerror="this.remove()" />
+        <img class="logo-img logo-img--dark" src="assets/img/daphine-santana-logo-extensa-branca-fundo-transparente.png" alt="Daphine Santana" loading="lazy" decoding="async" onerror="this.remove()" />
+        <img class="logo-img logo-img--light" src="assets/img/daphine-santana-logo-extensa-transparente.png" alt="Daphine Santana" loading="lazy" decoding="async" onerror="this.remove()" />
+        <img class="logo-img logo-img--dark" src="assets/img/larissa-sayuri-route-logo-extensa-transparente.png" alt="Mentoria Route" loading="lazy" decoding="async" onerror="this.remove()" />
+        <img class="logo-img logo-img--light" src="assets/img/larissa-sayuri-route-logo-extensa-preta-fundo-transparente.png" alt="Mentoria Route" loading="lazy" decoding="async" onerror="this.remove()" />
+        <img class="logo-img logo-img--dark" src="assets/img/aces-logo-extensa-branca-fundo-transparente.png" alt="ACES Electrical Services" loading="lazy" decoding="async" onerror="this.remove()" />
+        <img class="logo-img logo-img--light" src="assets/img/aces-logo-extensa-preta-fundo-transparente.png" alt="ACES Electrical Services" loading="lazy" decoding="async" onerror="this.remove()" />
+        <img class="logo-img" src="assets/img/coopmed-logo-extensa-fundo-transparente.png" alt="Coopmed Mogi" loading="lazy" decoding="async" onerror="this.remove()" />
+        <img class="logo-img logo-img--dark" src="assets/img/quilombo-doces-logo-extensa-branco-transparente.png" alt="Quilombo Doces" loading="lazy" decoding="async" onerror="this.remove()" />
+        <img class="logo-img logo-img--light" src="assets/img/quilombo-doces-logo-extensa-transparente.png" alt="Quilombo Doces" loading="lazy" decoding="async" onerror="this.remove()" />
       </div>
     </div>
   </section>
@@ -245,6 +253,7 @@
       <header class="section-head">
         <span class="section-head__num">01</span>
         <h2 class="section-head__title" data-i18n="services.title">O que eu faço</h2>
+        <p class="section-head__sub" data-i18n="services.sub">O que o seu negócio precisa pra ser levado a sério no digital.</p>
       </header>
 
       <div class="services__grid">
@@ -302,6 +311,7 @@
       <header class="section-head">
         <span class="section-head__num">02</span>
         <h2 class="section-head__title" data-i18n="work.title">Trabalhos recentes</h2>
+        <p class="section-head__sub" data-i18n="work.sub">Projetos no ar, rodando e gerando resultado. Nada de template pronto: cada site é feito do zero, sob medida.</p>
       </header>
 
       <div class="work__grid">
@@ -334,8 +344,8 @@
           </div>
           <div class="case__info">
             <div class="case__meta">
+              <img class="case__logo" src="assets/img/hidro-sul-logo-pequena-transparente.png" alt="" aria-hidden="true" onerror="this.remove()" />
               <span class="case__type" data-i18n="work.case06.type">Site Institucional · B2B</span>
-              <span class="case__status case__status--live" data-i18n="work.case06.status">Entregue</span>
             </div>
             <h3 class="case__title" data-i18n="work.case06.title">Hidro-Sul</h3>
             <p class="case__desc" data-i18n="work.case06.desc">
@@ -382,8 +392,9 @@
           </div>
           <div class="case__info">
             <div class="case__meta">
+              <img class="case__logo case__logo--dark" src="assets/img/daphine-santana-logo-pequena-transparente.png" alt="" aria-hidden="true" onerror="this.remove()" />
+              <img class="case__logo case__logo--light" src="assets/img/daphine-santana-logo-pequena-verde-fundo-transparente.png" alt="" aria-hidden="true" onerror="this.remove()" />
               <span class="case__type" data-i18n="work.case07.type">Marca Pessoal</span>
-              <span class="case__status case__status--live" data-i18n="work.case07.status">Entregue</span>
             </div>
             <h3 class="case__title" data-i18n="work.case07.title">Daphine Santana</h3>
             <p class="case__desc" data-i18n="work.case07.desc">
@@ -430,8 +441,8 @@
           </div>
           <div class="case__info">
             <div class="case__meta">
+              <img class="case__logo" src="assets/img/larissa-sayuri-route-logo-pequena-transparente.png" alt="" aria-hidden="true" onerror="this.remove()" />
               <span class="case__type" data-i18n="work.case05.type">Landing Page</span>
-              <span class="case__status case__status--live" data-i18n="work.case05.status">Entregue</span>
             </div>
             <h3 class="case__title" data-i18n="work.case05.title">Mentoria Route</h3>
             <p class="case__desc" data-i18n="work.case05.desc">
@@ -479,8 +490,8 @@
           </div>
           <div class="case__info">
             <div class="case__meta">
+              <img class="case__logo" src="assets/img/aces-logo-pequena-transparente.png" alt="" aria-hidden="true" onerror="this.remove()" />
               <span class="case__type" data-i18n="work.case01.type">Site Institucional · EUA</span>
-              <span class="case__status case__status--live" data-i18n="work.case01.status">Entregue</span>
             </div>
             <h3 class="case__title" data-i18n="work.case01.title">ACES Electrical Services</h3>
             <p class="case__desc" data-i18n="work.case01.desc">
@@ -528,8 +539,8 @@
           </div>
           <div class="case__info">
             <div class="case__meta">
+              <img class="case__logo" src="assets/img/coopmed-logo-pequena-fundo-transparente.png" alt="" aria-hidden="true" onerror="this.remove()" />
               <span class="case__type" data-i18n="work.case03.type">Site Institucional</span>
-              <span class="case__status case__status--live" data-i18n="work.case03.status">Entregue</span>
             </div>
             <h3 class="case__title" data-i18n="work.case03.title">Coopmed Mogi</h3>
             <p class="case__desc" data-i18n="work.case03.desc">
@@ -572,8 +583,8 @@
           </div>
           <div class="case__info">
             <div class="case__meta">
+              <img class="case__logo" src="assets/img/quilombo-doces-logo-pequena-transparente.png" alt="" aria-hidden="true" onerror="this.remove()" />
               <span class="case__type" data-i18n="work.case02.type">E-commerce</span>
-              <span class="case__status case__status--live" data-i18n="work.case02.status">Entregue</span>
             </div>
             <h3 class="case__title" data-i18n="work.case02.title">Quilombo Doces</h3>
             <p class="case__desc" data-i18n="work.case02.desc">
@@ -711,6 +722,7 @@
       <header class="section-head">
         <span class="section-head__num">04</span>
         <h2 class="section-head__title" data-i18n="process.title">Como a gente trabalha junto</h2>
+        <p class="section-head__sub" data-i18n="process.sub">Do primeiro contato à entrega. Você acompanha cada etapa.</p>
       </header>
 
       <div class="process__wrap">
@@ -767,11 +779,12 @@
         <div class="about__monogram">
           <span>C</span>
         </div>
-        <div class="about__tags">
-          <span class="about__tag" data-i18n="about.tag1">Dev front-end</span>
-          <span class="about__tag" data-i18n="about.tag2">Web designer</span>
-          <span class="about__tag" data-i18n="about.tag3">SEO</span>
-          <span class="about__tag" data-i18n="about.tag4">UX</span>
+        <div class="about__pills">
+          <span class="about-pill about-pill--1" data-i18n="about.tag1">Dev front-end</span>
+          <span class="about-pill about-pill--2" data-i18n="about.tag2">Web designer</span>
+          <span class="about-pill about-pill--3" data-i18n="about.tag3">PT / EN</span>
+          <span class="about-pill about-pill--4" data-i18n="about.tag4">★ café &amp; código</span>
+          <span class="about-pill about-pill--5" data-i18n="about.tag5">{ performance }</span>
         </div>
       </div>
 
@@ -814,6 +827,7 @@
       <header class="section-head">
         <span class="section-head__num">06</span>
         <h2 class="section-head__title" data-i18n="faq.title">Dúvidas frequentes</h2>
+        <p class="section-head__sub" data-i18n="faq.sub">O que quase todo mundo pergunta antes de fechar.</p>
       </header>
 
       <div class="faq__list">
