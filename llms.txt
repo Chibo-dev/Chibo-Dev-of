@@ -1,0 +1,38 @@
+# Chibo Dev
+
+> Desenvolvimento front-end e web design freelance. Criação de sites sob medida (landing pages, institucionais e de marca pessoal) que unem visual premium e conversão, para clientes no Brasil e nos EUA. Bilíngue PT/EN.
+
+Chibo Dev é a operação solo de Yuri Chiba, focada em sites feitos do zero: rápidos, otimizados para Google e prontos para converter, do orçamento à entrega, sem depender de construtores prontos. Tagline: "Bonito vende, funcional converte e eu faço os dois."
+
+## Site (one-page)
+- [Início](https://chibodev.com/): serviços, portfólio, processo, depoimentos e contato numa página só
+- [Serviços](https://chibodev.com/#services): landing pages, sites institucionais e de marca pessoal
+- [Portfólio](https://chibodev.com/#work): cases reais com desafio, solução e resultado
+- [Sobre](https://chibodev.com/#about): quem é o Chibo e como trabalha
+- [Contato](https://chibodev.com/#contact): formulário e canais diretos
+
+## Serviços
+- Landing pages: páginas de conversão para campanhas, lançamentos e captação
+- Sites institucionais: presença completa para empresas, com foco em credibilidade e SEO
+- Sites de marca pessoal: presença própria para profissionais e criadores
+- Stack: HTML/CSS/JS, React/Next.js e WordPress
+
+## Portfólio
+- ACES Electrical Services: site institucional em inglês para empreiteira elétrica nos EUA
+- Hidro-Sul: site B2B de individualização de água e gás em São Paulo
+- Mentoria Route (Larissa Sayuri): landing page bilíngue de mentoria de carreira
+- Daphine Santana: site profissional de psicomotricidade e desenvolvimento infantil
+- Quilombo Doces: e-commerce de geleias e doces artesanais de raiz quilombola
+- Coopmed Mogi: site institucional de cooperativa médica
+
+## Contato
+- WhatsApp: https://wa.me/5511981783418
+- E-mail: contato@chibodev.com
+- Instagram: https://instagram.com/chibodev
+- Formulário: https://chibodev.com/#contact
+
+## Notas para agentes
+- Idiomas: PT-BR e EN (site bilíngue, alternância no próprio site)
+- Cobertura: Brasil e Estados Unidos
+- Orçamento é feito por WhatsApp ou formulário, sem catálogo de preços fixo no site
+- Políticas: https://chibodev.com/politica-de-privacidade.html, https://chibodev.com/politica-de-cookies.html, https://chibodev.com/termos-de-uso.html
