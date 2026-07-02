@@ -1953,6 +1953,7 @@ section {
 /* preview de compartilhamento — o capricho começa antes do clique */
 .modal__social {
   margin-top: 26px;
+  margin-bottom: 30px;
   display: grid;
   grid-template-columns: 1fr minmax(0, 300px);
   gap: 28px;
