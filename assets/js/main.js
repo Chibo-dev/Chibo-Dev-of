@@ -106,6 +106,8 @@ const translations = {
     'testi.r3': 'Hidro-Sul',
     'testi.q4': 'Trabalhar com você foi uma experiência excelente. Além de compreender exatamente o que eu queria transmitir com o site, você conseguiu transformar minhas ideias em algo muito mais profissional, bonito e funcional do que eu imaginava. O cuidado com os detalhes, a agilidade nas entregas e a disponibilidade durante todo o processo fizeram toda a diferença no resultado final.',
     'testi.r4': 'Psicomotricista',
+    'testi.q5': 'Se eu pudesse descrever o seu trabalho em apenas uma palavra, com muita dificuldade de encontrar apenas uma, eu escolheria perfeição. Não há um detalhe que não tenha sido pensado, revisado e cuidadosamente preparado. Entre tantos códigos e palavras, você conseguiu transmitir os exatos sentimentos que eu gostaria de passar ao cliente. Isso sem contar a rapidez com que o site foi feito: não poderia ser mais impressionante.',
+    'testi.r5': 'Marketing Manager',
 
     'cta.eyebrow': '→ próximo passo',
     'cta.title': 'Seu próximo projeto pode ser o próximo case aqui.',
@@ -292,6 +294,8 @@ const translations = {
     'testi.r3': 'Hidro-Sul',
     'testi.q4': "Working with you was an excellent experience. Beyond understanding exactly what I wanted to convey with the site, you turned my ideas into something far more professional, beautiful and functional than I had imagined. The attention to detail, the fast turnaround and your availability throughout the whole process made all the difference in the final result.",
     'testi.r4': 'Psychomotricity specialist',
+    'testi.q5': "If I could describe your work in a single word, though finding just one is really hard, I'd choose perfection. There isn't a single detail that wasn't thought through, reviewed and carefully prepared. Among so much code and so many words, you managed to convey the exact feelings I wanted to pass on to the client. And that's without mentioning how fast the site was built: it couldn't have been more impressive.",
+    'testi.r5': 'Marketing Manager',
 
     'cta.eyebrow': '→ next step',
     'cta.title': 'Your next project could be the next case here.',
@@ -486,6 +490,15 @@ const caseData = {
     displayUrl: 'larissasayuri.com',
     poster: 'assets/img/mentoria-route-desktop.webp',
     video: 'assets/videos/route.mp4',
+    videoMobile: 'assets/videos/route-mobile.mp4',
+    posterMobile: 'assets/img/mentoria-route-mobile.webp',
+    social: {
+      image: 'assets/img/route-social.webp',
+      favicon: 'assets/img/route-favicon.svg',
+      title: 'Mentoria ROUTE — Larissa Sayuri',
+      desc: 'Your route to the life you want. Mentoria individual de desenvolvimento pessoal e carreira. PT & EN.',
+      domain: 'larissasayuri.com'
+    },
     pagespeed: [100, 100, 100, 100],
     stack: ['html5', 'css', 'javascript', 'cloudflare'],
     pt: {
@@ -782,7 +795,7 @@ form?.addEventListener('submit', async (e) => {
 
   const payload = new FormData(form);
   payload.append('access_key', WEB3FORMS_KEY);
-  payload.append('subject', 'Novo contato pelo site — Chibo Dev');
+  payload.append('subject', 'Novo contato pelo site · Chibo Dev');
   payload.append('from_name', 'Site Chibo Dev');
 
   setSubmitting(true);
@@ -813,6 +826,7 @@ const caseModal = document.getElementById('caseModal');
 const modalType = document.getElementById('modalType');
 const modalTitleEl = document.getElementById('caseModalTitle');
 const modalStage = document.getElementById('modalStage');
+const modalSocial = document.getElementById('modalSocial');
 const modalChallenge = document.getElementById('modalChallenge');
 const modalSolution = document.getElementById('modalSolution');
 const modalResultText = document.getElementById('modalResultText');
@@ -826,6 +840,7 @@ const modalLiveText = document.getElementById('modalLiveText');
 const modalSimilarText = document.getElementById('modalSimilarText');
 
 let lastFocusedEl = null;
+let modalRaf = 0;
 
 function openCaseModal(caseId) {
   const caseEl = document.querySelector(`[data-case-id="${caseId}"]`);
@@ -853,7 +868,34 @@ function openCaseModal(caseId) {
   const phoneInner = (cfg.videoMobile || cfg.posterMobile)
     ? mediaEl(cfg.videoMobile, cfg.posterMobile)
     : `<div class="stage__phone-skeleton"><span style="width:40%"></span><span style="width:72%"></span><span class="is-accent" style="width:52%"></span><span style="width:64%"></span><span style="width:34%"></span><span style="width:58%"></span></div>`;
-  modalStage.innerHTML = `<div class="stage__desktop"><div class="browser browser--modal"><div class="browser__bar"><span class="browser__dots"><i></i><i></i><i></i></span><span class="browser__url">${displayUrl}</span></div><div class="browser__screen">${deskInner}</div></div></div><div class="stage__phone" aria-hidden="true"><div class="stage__phone-screen">${phoneInner}</div></div>`;
+
+  const hasVideo = cfg.video && !reduce;
+  const progressHtml = hasVideo ? `<div class="modal__progress"><span class="modal__progress-fill"></span></div>` : '';
+  const S = lang === 'pt'
+    ? { eyebrow: 'Detalhe que quase ninguém cuida', note: 'O capricho começa antes do clique: é assim que o link já chega quando alguém compartilha.', checks: ['Ícone próprio na aba do navegador', 'Prévia pronta ao compartilhar o link'] }
+    : { eyebrow: 'A detail most people skip', note: 'The polish starts before the click: this is exactly how the link shows up when it’s shared.', checks: ['Its own browser-tab icon', 'A polished preview when shared'] };
+  const checksHtml = S.checks.map(c => `<li>${c}</li>`).join('');
+  const socialHtml = cfg.social
+    ? `<div class="modal__social"><div class="modal__social-txt"><p class="modal__social-eyebrow">${S.eyebrow}</p><p class="modal__social-note">${S.note}</p><ul class="modal__social-checks">${checksHtml}</ul></div><div class="social-card"><div class="social-card__img"><img src="${cfg.social.image}" alt="${cfg.social.title}" loading="lazy"></div><div class="social-card__body"><span class="social-card__title">${cfg.social.title}</span><span class="social-card__desc">${cfg.social.desc}</span><span class="social-card__domain">${cfg.social.favicon ? `<img class="social-card__favicon" src="${cfg.social.favicon}" alt="" aria-hidden="true">` : ''}${cfg.social.domain}</span></div></div></div>`
+    : '';
+
+  modalStage.innerHTML =
+    `<div class="modal__stage-row"><div class="stage__desktop"><div class="browser browser--modal"><div class="browser__bar"><span class="browser__dots"><i></i><i></i><i></i></span><span class="browser__url">${displayUrl}</span></div><div class="browser__screen">${deskInner}</div></div></div><div class="stage__phone" aria-hidden="true"><div class="stage__phone-screen">${phoneInner}</div></div></div>`
+    + progressHtml;
+  if (modalSocial) modalSocial.innerHTML = socialHtml;
+
+  // progress bar sincronizada ao tempo do vídeo desktop (rAF = suave, acompanha o loop)
+  cancelAnimationFrame(modalRaf);
+  const _vid = modalStage.querySelector('.stage__desktop video');
+  const _fill = modalStage.querySelector('.modal__progress-fill');
+  if (_vid && _fill) {
+    const tick = () => {
+      if (caseModal.hidden) return;
+      if (_vid.duration) _fill.style.width = (_vid.currentTime / _vid.duration * 100) + '%';
+      modalRaf = requestAnimationFrame(tick);
+    };
+    modalRaf = requestAnimationFrame(tick);
+  }
 
   document.getElementById('modalChallengeLabel').textContent = L.challenge;
   modalChallenge.textContent = d.challenge;
@@ -909,7 +951,9 @@ function closeCaseModal() {
   document.body.classList.remove('is-modal-open');
 
   // Limpar o stage pra parar qualquer vídeo em reprodução
+  cancelAnimationFrame(modalRaf);
   if (modalStage) modalStage.innerHTML = '';
+  if (modalSocial) modalSocial.innerHTML = '';
 
   // Restaurar foco
   if (lastFocusedEl && typeof lastFocusedEl.focus === 'function') {
